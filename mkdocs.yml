@@ -1,0 +1,111 @@
+site_name: Plataformas, Microsserviços e APIs
+site_url: https://DeenaElOrra.github.io/plataforma
+repo_url: https://github.com/DeenaElOrra/plataforma
+site_author: Deena Orra
+
+theme:
+  name: material
+  language: pt-BR
+  logo: assets/images/favicon.png
+  favicon: assets/images/favicon.png
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      primary: grey
+      accent: indigo
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: grey
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: grey
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
+  features:
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+    - content.tooltips
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.top
+    - navigation.path
+    - navigation.tracking
+    - navigation.expand
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.arithmatex:
+      generic: true
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: true
+      auto_caption: false
+      caption_position: bottom
+  - git-revision-date-localized:
+      enable_creation_date: true
+  - git-authors
+  - badges
+
+extra_javascript:
+  - assets/_markdown_exec_pyodide.js
+  - https://unpkg.com/mathjax/es5/tex-mml-chtml.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://fastly.jsdelivr.net/npm/jquery/dist/jquery.min.js
+  - https://fastly.jsdelivr.net/npm/echarts/dist/echarts.min.js
+  - javascripts/mathjax.js
+  - termynal.js
+
+extra_css:
+  - assets/_markdown_exec_pyodide.css
+  - assets/_markdown_exec_ansi.css
+  - assets/stylesheets/badge.css
+  - termynal.css
+
+nav:
+  - Home: index.md
+  - This documentation: thisdocumentation/main.md
+  - Roteiros:
+    - Roteiro 1: roteiro1/main.md
+    - Roteiro 2: roteiro2/main.md
+    - Roteiro 3: roteiro3/main.md
+    - Roteiro 4: roteiro4/main.md
+    - Notebook 1: notebook1/ex1_data.md
+  - Projeto: projeto/main.md
