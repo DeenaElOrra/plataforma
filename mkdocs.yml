@@ -5,7 +5,7 @@ site_author: Deena Orra
 
 theme:
   name: material
-  language: pt-BR
+  language: pt
   logo: assets/images/favicon.png
   favicon: assets/images/favicon.png
   palette:
