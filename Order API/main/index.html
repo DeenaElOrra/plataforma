@@ -10,6 +10,10 @@
         <link rel="canonical" href="https://DeenaElOrra.github.io/plataforma/Order%20API/main/">
       
       
+        <link rel="prev" href="../../Exchange%20API/main/">
+      
+      
+        <link rel="next" href="../../Jenkins/main/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -17,7 +21,7 @@
     
     
       
-        <title>Order API - Documentação - Plataformas, Microsserviços e APIs</title>
+        <title>Order API - Plataformas, Microsserviços e APIs</title>
       
     
     
@@ -122,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Order API - Documentação
+              Order API
             
           </span>
         </div>
@@ -318,20 +322,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -347,7 +351,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Roteiros
@@ -361,12 +365,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../roteiro1/main.md" class="md-nav__link">
+      <a href="../../Product%20API/main/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Roteiro 1
+    Product API
     
   </span>
   
@@ -384,12 +388,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../roteiro2/main.md" class="md-nav__link">
+      <a href="../../Exchange%20API/main/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Roteiro 2
+    Exchange API
     
   </span>
   
@@ -404,20 +408,323 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../roteiro3/main.md" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Order API
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Roteiro 3
+    Order API
     
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#visao-geral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visão Geral
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endpoints-principais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoints Principais
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Endpoints Principais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-criar-pedido" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Criar Pedido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-listar-todos-os-pedidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Listar Todos os Pedidos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-buscar-pedido-por-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Buscar Pedido por ID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-deletar-pedido" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Deletar Pedido
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testes-com-postman" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testes com Postman
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testes com Postman">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criar-pedido" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criar Pedido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listar-pedidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listar Pedidos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buscar-pedido-por-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      Buscar Pedido por ID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deletar-pedido" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deletar Pedido
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estrutura-do-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estrutura do Projeto
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estrutura do Projeto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#order-api-feignclient" class="md-nav__link">
+    <span class="md-ellipsis">
+      Order API (FeignClient)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#order-service-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Order Service API
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repositorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repositórios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Repositórios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variaveis-de-ambiente-order-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variáveis de Ambiente (Order Service)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executar-order-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executar Order Service
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema-do-banco-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schema do Banco de Dados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schema do Banco de Dados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schema-orders" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schema: orders
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabela-orders" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela: orders
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabela-order_item" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela: order_item
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemplos-de-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemplos de Uso
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemplos de Uso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criar-pedido-completo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criar Pedido Completo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logging
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dockerfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dockerfile
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -430,12 +737,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../roteiro4/main.md" class="md-nav__link">
+      <a href="../../Jenkins/main/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Roteiro 4
+    Jenkins
     
   </span>
   

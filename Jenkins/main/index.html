@@ -10,6 +10,10 @@
         <link rel="canonical" href="https://DeenaElOrra.github.io/plataforma/Jenkins/main/">
       
       
+        <link rel="prev" href="../../Order%20API/main/">
+      
+      
+        <link rel="next" href="../../notebook1/ex1_data/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -17,7 +21,7 @@
     
     
       
-        <title>Jenkins CI/CD - Documentação - Plataformas, Microsserviços e APIs</title>
+        <title>Jenkins - Plataformas, Microsserviços e APIs</title>
       
     
     
@@ -122,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Jenkins CI/CD - Documentação
+              Jenkins
             
           </span>
         </div>
@@ -318,20 +322,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -347,7 +351,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Roteiros
@@ -361,12 +365,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../roteiro1/main.md" class="md-nav__link">
+      <a href="../../Product%20API/main/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Roteiro 1
+    Product API
     
   </span>
   
@@ -384,12 +388,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../roteiro2/main.md" class="md-nav__link">
+      <a href="../../Exchange%20API/main/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Roteiro 2
+    Exchange API
     
   </span>
   
@@ -407,12 +411,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../roteiro3/main.md" class="md-nav__link">
+      <a href="../../Order%20API/main/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Roteiro 3
+    Order API
     
   </span>
   
@@ -427,20 +431,299 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../roteiro4/main.md" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Jenkins
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Roteiro 4
+    Jenkins
     
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#visao-geral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visão Geral
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estrutura-do-projeto-jenkins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estrutura do Projeto Jenkins
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pipelines-configurados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pipelines Configurados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pipelines Configurados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apis-de-interface-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      APIs de Interface (Libraries)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="APIs de Interface (Libraries)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-account-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Account API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-auth-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Auth API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-product-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Product API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-order-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Order API
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servicos-com-docker-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Serviços com Docker (Services)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Serviços com Docker (Services)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5-product-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Product Service
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-order-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Order Service
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-account-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Account Service
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-auth-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Auth Service
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-gateway-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Gateway Service
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-exchange-service-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Exchange Service (Python)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grafo-de-dependencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grafo de Dependências
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracao-do-jenkins-com-docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuração do Jenkins com Docker Compose
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuração do Jenkins com Docker Compose">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arquivo-jenkinscomposeyaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arquivo: jenkins/compose.yaml
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executar-jenkins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executar Jenkins
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screenshots-do-jenkins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Screenshots do Jenkins
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Screenshots do Jenkins">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dashboard-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dashboard Principal
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credenciais-do-docker-hub" class="md-nav__link">
+    <span class="md-ellipsis">
+      Credenciais do Docker Hub
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#imagens-docker-publicadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Imagens Docker Publicadas
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 

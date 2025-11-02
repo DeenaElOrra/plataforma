@@ -10,6 +10,10 @@
         <link rel="canonical" href="https://DeenaElOrra.github.io/plataforma/Exchange%20API/main/">
       
       
+        <link rel="prev" href="../../Product%20API/main/">
+      
+      
+        <link rel="next" href="../../Order%20API/main/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -17,7 +21,7 @@
     
     
       
-        <title>Exchange API - Documentação - Plataformas, Microsserviços e APIs</title>
+        <title>Exchange API - Plataformas, Microsserviços e APIs</title>
       
     
     
@@ -122,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Exchange API - Documentação
+              Exchange API
             
           </span>
         </div>
@@ -318,20 +322,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -347,7 +351,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Roteiros
@@ -361,12 +365,301 @@
   
   
     <li class="md-nav__item">
-      <a href="../../roteiro1/main.md" class="md-nav__link">
+      <a href="../../Product%20API/main/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Roteiro 1
+    Product API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Exchange API
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exchange API
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#visao-geral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visão Geral
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endpoints-principais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoints Principais
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Endpoints Principais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-obter-taxa-de-cambio" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Obter Taxa de Câmbio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-health-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Health Check
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-informacoes-da-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Informações da API
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testes-com-postman" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testes com Postman
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testes com Postman">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obter-taxa-de-cambio-usd-para-brl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obter Taxa de Câmbio (USD para BRL)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#informacoes-da-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Informações da API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#health-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Health Check
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estrutura-do-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estrutura do Projeto
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estrutura do Projeto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exchange-api-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exchange API (FastAPI)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repositorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repositórios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracao-e-execucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuração e Execução
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuração e Execução">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#executar-localmente-sem-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executar Localmente (sem Docker)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executar-com-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executar com Docker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploy-no-kubernetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploy no Kubernetes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arquitetura-de-microservicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arquitetura de Microserviços
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Arquitetura de Microserviços">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comunicacao-com-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comunicação com Gateway
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracao-de-rota-no-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuração de Rota no Gateway
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Order%20API/main/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Order API
     
   </span>
   
@@ -384,58 +677,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../roteiro2/main.md" class="md-nav__link">
+      <a href="../../Jenkins/main/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Roteiro 2
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../roteiro3/main.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Roteiro 3
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../roteiro4/main.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Roteiro 4
+    Jenkins
     
   </span>
   
