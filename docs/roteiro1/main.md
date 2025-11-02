@@ -92,10 +92,10 @@ A **Product API** é uma API RESTful de CRUD (Create, Read, Update, Delete) dese
 ## Testes com Postman
 
 ### Criar Produto
-![POST /product](docs/roteiro1/682EB3A7-3CF6-4939-A5AB-D671055ED426_1_105_c.jpeg)
+![POST /product](roteiro1/682EB3A7-3CF6-4939-A5AB-D671055ED426_1_105_c.jpeg)
 
 ### Listar Produtos
-![GET /product](docs/roteiro1/C990F84A-BAEF-48F5-A18C-B946D70B8AB1_1_105_c.jpeg)
+![GET /product](C990F84A-BAEF-48F5-A18C-B946D70B8AB1_1_105_c.jpeg)
 
 ### Buscar Produto por ID
 ![GET /product/{id}](docs/roteiro1/D807CD09-9980-4BAF-A36B-B36137A2D681.jpeg)
@@ -166,9 +166,9 @@ A **Product API** é uma API RESTful de CRUD (Create, Read, Update, Delete) dese
 
 | Componente | Descrição | Link do Repositório |
 |------------|-----------|---------------------|
-| **Product API** | FeignClient para comunicação entre microserviços | https://github.com/DeenaElOrra/product |
-| **Product Service** | Serviço principal com lógica de negócios e persistência | https://github.com/DeenaElOrra/product_service |
-| **Gateway** | API Gateway para roteamento de requisições | https://github.com/DeenaElOrra/gateway-service |
+| **Product API** | FeignClient para comunicação entre microserviços | [https://github.com/DeenaElOrra/product] |
+| **Product Service** | Serviço principal com lógica de negócios e persistência | [https://github.com/DeenaElOrra/product_service] |
+| **Gateway** | API Gateway para roteamento de requisições | [https://github.com/DeenaElOrra/gateway-service] |
 
 ---
 
