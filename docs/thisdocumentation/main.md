@@ -2,7 +2,7 @@
 
 ## Pré-requisitos
 
-APIOIOIONJNNK
+Antes de começar, certifique-se de que você possui os seguintes pré-requisitos instalados em seu sistema:
 
 - **Git**: Para clonar o repositório.
 
