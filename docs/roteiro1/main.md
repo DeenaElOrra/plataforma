@@ -92,17 +92,17 @@ A **Product API** é uma API RESTful de CRUD (Create, Read, Update, Delete) dese
 ## Testes com Postman
 
 ### Criar Produto
-![POST /product](roteiro1/682EB3A7-3CF6-4939-A5AB-D671055ED426_1_105_c.jpeg)
+![POST /product](682EB3A7-3CF6-4939-A5AB-D671055ED426_1_105_c.jpeg)
 
 ### Listar Produtos
 ![GET /product](C990F84A-BAEF-48F5-A18C-B946D70B8AB1_1_105_c.jpeg)
 
 ### Buscar Produto por ID
-![GET /product/{id}](docs/roteiro1/D807CD09-9980-4BAF-A36B-B36137A2D681.jpeg)
+![GET /product/{id}](D807CD09-9980-4BAF-A36B-B36137A2D681.jpeg)
 
 ### Deletar Produto
-![DELETE /product/{id}](docs/roteiro1/092C293C-F423-40F3-B824-63853EB25A56.jpeg)
-![DELETE /product/{id}](docs/roteiro1/802D4243-97E5-4656-8626-B057F8D78F87_1_105_c.jpeg)
+![DELETE /product/{id}](092C293C-F423-40F3-B824-63853EB25A56.jpeg)
+![DELETE /product/{id}](802D4243-97E5-4656-8626-B057F8D78F87_1_105_c.jpeg)
 
 ---
 
