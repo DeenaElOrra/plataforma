@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
     
     
       
@@ -91,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#roteiro-2" class="md-skip">
+        <a href="#exchange-api-documentacao" class="md-skip">
           Ir para o conteúdo
         </a>
       
@@ -397,6 +397,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Roteiro 2
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -408,6 +421,529 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#visao-geral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visão Geral
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endpoints-principais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoints Principais
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Endpoints Principais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-obter-taxa-de-cambio" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Obter Taxa de Câmbio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-health-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Health Check
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-informacoes-da-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Informações da API
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testes-com-postman" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testes com Postman
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testes com Postman">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obter-taxa-de-cambio-usd-para-brl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obter Taxa de Câmbio (USD para BRL)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obter-taxa-de-cambio-eur-para-brl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obter Taxa de Câmbio (EUR para BRL)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#health-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Health Check
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erro-moeda-invalida" class="md-nav__link">
+    <span class="md-ellipsis">
+      Erro - Moeda Inválida
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estrutura-do-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estrutura do Projeto
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estrutura do Projeto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exchange-api-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exchange API (FastAPI)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detalhamento-dos-arquivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detalhamento dos Arquivos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repositorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repositórios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnologias-utilizadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tecnologias Utilizadas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracao-e-execucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuração e Execução
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuração e Execução">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pré-requisitos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executar-localmente-sem-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executar Localmente (sem Docker)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executar-com-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executar com Docker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploy-no-kubernetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploy no Kubernetes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integracao-com-api-externa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integração com API Externa
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integração com API Externa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#awesome-api-economia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Awesome API - Economia
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculo-de-spread" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cálculo de Spread
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autenticacao-e-seguranca" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autenticação e Segurança
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Autenticação e Segurança">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-de-autenticacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo de Autenticação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#endpoints-publicos-sem-autenticacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoints Públicos (sem autenticação)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validações
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Validações">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#validacao-de-account-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validação de Account ID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validacao-de-codigo-de-moeda" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validação de Código de Moeda
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tratamento-de-erros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tratamento de Erros
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arquitetura-de-microservicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arquitetura de Microserviços
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Arquitetura de Microserviços">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comunicacao-com-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comunicação com Gateway
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracao-de-rota-no-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuração de Rota no Gateway
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentacao-interativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentação Interativa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logging
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursos-do-kubernetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recursos do Kubernetes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recursos do Kubernetes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deployment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemplos-de-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemplos de Uso
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemplos de Uso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obter-taxa-usd-para-brl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obter Taxa USD para BRL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obter-taxa-eur-para-usd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obter Taxa EUR para USD
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitoramento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monitoramento
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Monitoramento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#health-check-endpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Health Check Endpoint
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#moedas-suportadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moedas Suportadas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Moedas Suportadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principais-moedas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principais Moedas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitacoes-e-consideracoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitações e Considerações
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#licenca" class="md-nav__link">
+    <span class="md-ellipsis">
+      Licença
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contato" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contato
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -532,6 +1068,518 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#visao-geral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visão Geral
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endpoints-principais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoints Principais
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Endpoints Principais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-obter-taxa-de-cambio" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Obter Taxa de Câmbio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-health-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Health Check
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-informacoes-da-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Informações da API
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testes-com-postman" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testes com Postman
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testes com Postman">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obter-taxa-de-cambio-usd-para-brl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obter Taxa de Câmbio (USD para BRL)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obter-taxa-de-cambio-eur-para-brl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obter Taxa de Câmbio (EUR para BRL)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#health-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Health Check
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erro-moeda-invalida" class="md-nav__link">
+    <span class="md-ellipsis">
+      Erro - Moeda Inválida
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estrutura-do-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estrutura do Projeto
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estrutura do Projeto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exchange-api-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exchange API (FastAPI)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detalhamento-dos-arquivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detalhamento dos Arquivos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repositorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repositórios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnologias-utilizadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tecnologias Utilizadas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracao-e-execucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuração e Execução
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuração e Execução">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pré-requisitos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executar-localmente-sem-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executar Localmente (sem Docker)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executar-com-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executar com Docker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploy-no-kubernetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploy no Kubernetes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integracao-com-api-externa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integração com API Externa
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integração com API Externa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#awesome-api-economia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Awesome API - Economia
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculo-de-spread" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cálculo de Spread
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autenticacao-e-seguranca" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autenticação e Segurança
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Autenticação e Segurança">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-de-autenticacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo de Autenticação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#endpoints-publicos-sem-autenticacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoints Públicos (sem autenticação)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validações
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Validações">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#validacao-de-account-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validação de Account ID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validacao-de-codigo-de-moeda" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validação de Código de Moeda
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tratamento-de-erros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tratamento de Erros
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arquitetura-de-microservicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arquitetura de Microserviços
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Arquitetura de Microserviços">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comunicacao-com-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comunicação com Gateway
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracao-de-rota-no-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuração de Rota no Gateway
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentacao-interativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentação Interativa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logging
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursos-do-kubernetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recursos do Kubernetes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recursos do Kubernetes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deployment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemplos-de-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemplos de Uso
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemplos de Uso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obter-taxa-usd-para-brl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obter Taxa USD para BRL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obter-taxa-eur-para-usd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obter Taxa EUR para USD
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitoramento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monitoramento
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Monitoramento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#health-check-endpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Health Check Endpoint
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#moedas-suportadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moedas Suportadas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Moedas Suportadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principais-moedas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principais Moedas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitacoes-e-consideracoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitações e Considerações
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#licenca" class="md-nav__link">
+    <span class="md-ellipsis">
+      Licença
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contato" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contato
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -549,8 +1597,455 @@
   
 
 
-<h1 id="roteiro-2">Roteiro 2</h1>
-<p>Conteúdo do Roteiro 2 será adicionado aqui.</p>
+<h1 id="exchange-api-documentacao">Exchange API - Documentação</h1>
+<h2 id="visao-geral">Visão Geral</h2>
+<p>A <strong>Exchange API</strong> é uma API RESTful desenvolvida em Python com FastAPI para gerenciamento de taxas de câmbio em tempo real. A API integra-se com o serviço externo <a href="https://economia.awesomeapi.com.br">Awesome API</a> para obter cotações atualizadas de moedas e aplica um spread de 1.5% para cálculo das taxas de compra e venda. O serviço é protegido por autenticação JWT através do API Gateway e requer um ID de conta válido em cada requisição. A API suporta operações assíncronas para melhor performance e é totalmente containerizada com Docker e Kubernetes.</p>
+<hr>
+<h2 id="endpoints-principais">Endpoints Principais</h2>
+<h3 id="1-obter-taxa-de-cambio">1. Obter Taxa de Câmbio</h3>
+<p><strong>Endpoint:</strong> <code>GET /exchange/{from_currency}/{to_currency}</code></p>
+<p><strong>Descrição:</strong> Retorna as taxas de compra e venda entre duas moedas.</p>
+<p><strong>Headers Obrigatórios:</strong>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Authorization: Bearer {jwt_token}
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>id-account: {account_id}
+</code></pre></div><p></p>
+<p><strong>Parâmetros de Path:</strong>
+- <code>from_currency</code>: Código da moeda de origem (3 letras, ex: USD, BRL, EUR)
+- <code>to_currency</code>: Código da moeda de destino (3 letras, ex: USD, BRL, EUR)</p>
+<p><strong>Exemplo:</strong> <code>GET /exchange/USD/BRL</code></p>
+<p><strong>Response (200 OK):</strong>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">"buy"</span><span class="p">:</span><span class="w"> </span><span class="mf">5.2575</span><span class="p">,</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">"sell"</span><span class="p">:</span><span class="w"> </span><span class="mf">5.1825</span><span class="p">,</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-10-31 14:30:45"</span><span class="p">,</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="nt">"account_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"550e8400-e29b-41d4-a716-446655440000"</span><span class="p">,</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="nt">"base_rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">5.22</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">}</span>
+</code></pre></div><p></p>
+<p><strong>Campos da Resposta:</strong>
+- <code>buy</code>: Taxa de compra com spread de 1.5% aplicado
+- <code>sell</code>: Taxa de venda com spread de 1.5% aplicado
+- <code>timestamp</code>: Data e hora da transação
+- <code>account_id</code>: ID da conta do usuário autenticado
+- <code>base_rate</code>: Taxa base sem spread (obtida da API externa)</p>
+<p><strong>Códigos de Status:</strong>
+- <code>200 OK</code>: Taxa de câmbio retornada com sucesso
+- <code>400 Bad Request</code>: Códigos de moeda inválidos ou par não suportado
+- <code>401 Unauthorized</code>: Account ID ausente ou inválido
+- <code>503 Service Unavailable</code>: API externa indisponível
+- <code>504 Gateway Timeout</code>: Timeout ao chamar API externa
+- <code>500 Internal Server Error</code>: Erro interno do servidor</p>
+<hr>
+<h3 id="2-health-check">2. Health Check</h3>
+<p><strong>Endpoint:</strong> <code>GET /health</code></p>
+<p><strong>Descrição:</strong> Verifica o status de saúde do serviço.</p>
+<p><strong>Autenticação:</strong> Não requerida</p>
+<p><strong>Response (200 OK):</strong>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"healthy"</span><span class="p">,</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">"service"</span><span class="p">:</span><span class="w"> </span><span class="s2">"exchange-api"</span><span class="p">,</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nt">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-10-31T14:30:45.123456"</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">}</span>
+</code></pre></div><p></p>
+<hr>
+<h3 id="3-informacoes-da-api">3. Informações da API</h3>
+<p><strong>Endpoint:</strong> <code>GET /</code></p>
+<p><strong>Descrição:</strong> Retorna informações sobre a API e seus endpoints disponíveis.</p>
+<p><strong>Autenticação:</strong> Não requerida</p>
+<p><strong>Response (200 OK):</strong>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">"service"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Currency Exchange API"</span><span class="p">,</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.0"</span><span class="p">,</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="nt">"endpoints"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="nt">"exchange"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/exchange/{from}/{to}"</span><span class="p">,</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="nt">"health"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/health"</span><span class="p">,</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="nt">"docs"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/docs"</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="p">}</span>
+</code></pre></div><p></p>
+<hr>
+<h2 id="testes-com-postman">Testes com Postman</h2>
+<h3 id="obter-taxa-de-cambio-usd-para-brl">Obter Taxa de Câmbio (USD para BRL)</h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="./docs/postman-exchange-usd-brl.png" data-desc-position="bottom"><img alt="GET /exchange/USD/BRL" src="./docs/postman-exchange-usd-brl.png"></a></p>
+<h3 id="obter-taxa-de-cambio-eur-para-brl">Obter Taxa de Câmbio (EUR para BRL)</h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="./docs/postman-exchange-eur-brl.png" data-desc-position="bottom"><img alt="GET /exchange/EUR/BRL" src="./docs/postman-exchange-eur-brl.png"></a></p>
+<h3 id="health-check">Health Check</h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="./docs/postman-health.png" data-desc-position="bottom"><img alt="GET /health" src="./docs/postman-health.png"></a></p>
+<h3 id="erro-moeda-invalida">Erro - Moeda Inválida</h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="./docs/postman-error-invalid-currency.png" data-desc-position="bottom"><img alt="GET /exchange/INVALID/BRL" src="./docs/postman-error-invalid-currency.png"></a></p>
+<hr>
+<h2 id="estrutura-do-projeto">Estrutura do Projeto</h2>
+<h3 id="exchange-api-fastapi">Exchange API (FastAPI)</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>📁 api/
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>└── 📁 exchange/
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    ├── 📁 app/
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    │   ├── 📄 main.py
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    │   └── 📄 requirements.txt
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    ├── 📁 k8s/
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    │   └── 📄 k8s.yaml
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    ├── 📄 Dockerfile
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    ├── 📄 README.md
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    └── 📁 .git/
+</code></pre></div>
+<h3 id="detalhamento-dos-arquivos">Detalhamento dos Arquivos</h3>
+<p><strong>main.py</strong> - Aplicação FastAPI principal contendo:
+- <code>ExchangeRateResponse</code>: Modelo de resposta (Pydantic)
+- <code>ExchangeRateService</code>: Serviço de lógica de negócios
+- Rotas e endpoints REST
+- Validações de entrada
+- Tratamento de erros</p>
+<p><strong>requirements.txt</strong> - Dependências Python:
+- <code>fastapi==0.104.1</code> - Framework web
+- <code>uvicorn[standard]==0.24.0</code> - Servidor ASGI
+- <code>httpx==0.25.1</code> - Cliente HTTP assíncrono
+- <code>pydantic==2.5.0</code> - Validação de dados</p>
+<p><strong>Dockerfile</strong> - Containerização da aplicação:
+- Base: <code>python:3.11-slim</code>
+- Porta exposta: 8000
+- Comando: <code>uvicorn app.main:app --host 0.0.0.0 --port 8000</code></p>
+<p><strong>k8s.yaml</strong> - Configuração Kubernetes:
+- Deployment com 1 réplica
+- Service ClusterIP na porta 80
+- Recursos: 100Mi-200Mi RAM, 50m-200m CPU</p>
+<hr>
+<h2 id="repositorios">Repositórios</h2>
+<table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Descrição</th>
+<th>Link do Repositório</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Exchange API</strong></td>
+<td>API de taxas de câmbio em tempo real (FastAPI)</td>
+<td>[Link do repositório]</td>
+</tr>
+<tr>
+<td><strong>Gateway Service</strong></td>
+<td>API Gateway para roteamento e autenticação</td>
+<td>[Link do repositório]</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="tecnologias-utilizadas">Tecnologias Utilizadas</h2>
+<ul>
+<li><strong>FastAPI 0.104.1</strong> - Framework web moderno e de alta performance</li>
+<li><strong>Python 3.11</strong> - Linguagem de programação</li>
+<li><strong>Uvicorn</strong> - Servidor ASGI de alto desempenho</li>
+<li><strong>Httpx 0.25.1</strong> - Cliente HTTP assíncrono para chamadas externas</li>
+<li><strong>Pydantic 2.5.0</strong> - Validação de dados e serialização</li>
+<li><strong>Docker</strong> - Containerização da aplicação</li>
+<li><strong>Kubernetes</strong> - Orquestração de containers</li>
+</ul>
+<hr>
+<h2 id="configuracao-e-execucao">Configuração e Execução</h2>
+<h3 id="pre-requisitos">Pré-requisitos</h3>
+<ul>
+<li>Python 3.11+</li>
+<li>Docker (opcional, para containerização)</li>
+<li>Kubernetes (opcional, para deploy em cluster)</li>
+</ul>
+<h3 id="executar-localmente-sem-docker">Executar Localmente (sem Docker)</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">cd</span><span class="w"> </span>api/exchange
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>app/requirements.txt
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>uvicorn<span class="w"> </span>app.main:app<span class="w"> </span>--reload<span class="w"> </span>--host<span class="w"> </span><span class="m">0</span>.0.0.0<span class="w"> </span>--port<span class="w"> </span><span class="m">8000</span>
+</code></pre></div>
+<p>A aplicação estará disponível em: <code>http://localhost:8000</code></p>
+<h3 id="executar-com-docker">Executar com Docker</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">cd</span><span class="w"> </span>api/exchange
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>exchange-api<span class="w"> </span>.
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">8000</span>:8000<span class="w"> </span>exchange-api
+</code></pre></div>
+<h3 id="deploy-no-kubernetes">Deploy no Kubernetes</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">cd</span><span class="w"> </span>api/exchange
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>k8s/k8s.yaml
+</code></pre></div>
+<p>O serviço estará disponível internamente no cluster em: <code>http://exchange:80</code></p>
+<hr>
+<h2 id="integracao-com-api-externa">Integração com API Externa</h2>
+<h3 id="awesome-api-economia">Awesome API - Economia</h3>
+<ul>
+<li><strong>URL Base:</strong> <code>https://economia.awesomeapi.com.br/json/last</code></li>
+<li><strong>Formato de Requisição:</strong> <code>GET /{FROM_CURRENCY}-{TO_CURRENCY}</code></li>
+<li><strong>Exemplo:</strong> <code>https://economia.awesomeapi.com.br/json/last/USD-BRL</code></li>
+<li><strong>Timeout:</strong> 10 segundos</li>
+<li><strong>Taxa Utilizada:</strong> Campo <code>bid</code> da resposta (taxa de compra)</li>
+</ul>
+<h3 id="calculo-de-spread">Cálculo de Spread</h3>
+<p>A API aplica um spread de <strong>1.5%</strong> sobre a taxa base:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">SPREAD_PERCENTAGE</span> <span class="o">=</span> <span class="mf">0.015</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="n">buy_rate</span> <span class="o">=</span> <span class="n">base_rate</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">SPREAD_PERCENTAGE</span><span class="p">)</span>   <span class="c1"># +1.5%</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="n">sell_rate</span> <span class="o">=</span> <span class="n">base_rate</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">SPREAD_PERCENTAGE</span><span class="p">)</span>  <span class="c1"># -1.5%</span>
+</code></pre></div>
+<p><strong>Exemplo:</strong>
+- Taxa base: 5.22
+- Taxa de compra: 5.22 × 1.015 = <strong>5.2575</strong>
+- Taxa de venda: 5.22 × 0.985 = <strong>5.1825</strong></p>
+<hr>
+<h2 id="autenticacao-e-seguranca">Autenticação e Segurança</h2>
+<h3 id="fluxo-de-autenticacao">Fluxo de Autenticação</h3>
+<ol>
+<li>
+<p><strong>Cliente envia requisição</strong> para o Gateway:
+   </p><div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>GET /exchange/USD/BRL
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>Authorization: Bearer {jwt_token}
+</code></pre></div><p></p>
+</li>
+<li>
+<p><strong>Gateway (AuthorizationFilter)</strong> valida o token:</p>
+</li>
+<li>Extrai o token JWT do header <code>Authorization</code></li>
+<li>Valida o formato (<code>Bearer {token}</code>)</li>
+<li>
+<p>Chama o Auth Service para validar o token</p>
+</li>
+<li>
+<p><strong>Auth Service</strong> retorna o Account ID:
+   </p><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">{</span><span class="w"> </span><span class="nt">"idAccount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"550e8400-e29b-41d4-a716-446655440000"</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div><p></p>
+</li>
+<li>
+<p><strong>Gateway adiciona header</strong> e encaminha:
+   </p><div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>GET /exchange/USD/BRL
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>id-account: 550e8400-e29b-41d4-a716-446655440000
+</code></pre></div><p></p>
+</li>
+<li>
+<p><strong>Exchange API</strong> valida e processa:</p>
+</li>
+<li>Valida presença do header <code>id-account</code></li>
+<li>Valida códigos de moeda</li>
+<li>Busca taxa de câmbio</li>
+<li>Retorna resposta com dados do usuário</li>
+</ol>
+<h3 id="endpoints-publicos-sem-autenticacao">Endpoints Públicos (sem autenticação)</h3>
+<ul>
+<li><code>GET /health</code> - Health check</li>
+<li><code>GET /</code> - Informações da API</li>
+<li><code>GET /docs</code> - Documentação interativa (Swagger)</li>
+</ul>
+<hr>
+<h2 id="validacoes">Validações</h2>
+<h3 id="validacao-de-account-id">Validação de Account ID</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">validate_account_id</span><span class="p">(</span><span class="n">account_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    <span class="k">if</span> <span class="ow">not</span> <span class="n">account_id</span> <span class="ow">or</span> <span class="n">account_id</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="o">==</span> <span class="s2">""</span><span class="p">:</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>        <span class="k">raise</span> <span class="n">HTTPException</span><span class="p">(</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>            <span class="n">status_code</span><span class="o">=</span><span class="mi">401</span><span class="p">,</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>            <span class="n">detail</span><span class="o">=</span><span class="s2">"Account ID is required"</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>        <span class="p">)</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>    <span class="k">return</span> <span class="n">account_id</span>
+</code></pre></div>
+<h3 id="validacao-de-codigo-de-moeda">Validação de Código de Moeda</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">validate_currency_code</span><span class="p">(</span><span class="n">currency</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>    <span class="k">if</span> <span class="ow">not</span> <span class="n">currency</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">currency</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">3</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">currency</span><span class="o">.</span><span class="n">isalpha</span><span class="p">():</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>        <span class="k">raise</span> <span class="n">HTTPException</span><span class="p">(</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>            <span class="n">status_code</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>            <span class="n">detail</span><span class="o">=</span><span class="sa">f</span><span class="s2">"Invalid currency code: </span><span class="si">{</span><span class="n">currency</span><span class="si">}</span><span class="s2">"</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>        <span class="p">)</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>    <span class="k">return</span> <span class="n">currency</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+</code></pre></div>
+<hr>
+<h2 id="tratamento-de-erros">Tratamento de Erros</h2>
+<table>
+<thead>
+<tr>
+<th>Erro</th>
+<th>Status Code</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Account ID ausente</td>
+<td>401</td>
+<td>Header <code>id-account</code> não encontrado</td>
+</tr>
+<tr>
+<td>Código de moeda inválido</td>
+<td>400</td>
+<td>Código não tem 3 letras ou não é alfabético</td>
+</tr>
+<tr>
+<td>Moedas idênticas</td>
+<td>400</td>
+<td><code>from_currency</code> igual a <code>to_currency</code></td>
+</tr>
+<tr>
+<td>Par não suportado</td>
+<td>400</td>
+<td>API externa não suporta o par de moedas</td>
+</tr>
+<tr>
+<td>Timeout API externa</td>
+<td>504</td>
+<td>Tempo limite de 10s excedido</td>
+</tr>
+<tr>
+<td>API externa indisponível</td>
+<td>503</td>
+<td>Erro HTTP da API externa</td>
+</tr>
+<tr>
+<td>Erro interno</td>
+<td>500</td>
+<td>Exceção não tratada</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="arquitetura-de-microservicos">Arquitetura de Microserviços</h2>
+<h3 id="comunicacao-com-gateway">Comunicação com Gateway</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>Cliente
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>  |
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>  v
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>[Gateway Service - Spring Cloud Gateway] :8080
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>  |
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>  ├── Valida JWT token
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>  ├── Extrai Account ID do Auth Service
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>  ├── Adiciona header: id-account
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>  |
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>  v
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>[Exchange Service - FastAPI] :80
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>  |
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>  ├── Valida Account ID
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>  ├── Valida códigos de moeda
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>  ├── Chama API Externa (Awesome API)
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a>  ├── Aplica spread de 1.5%
+<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a>  └── Retorna taxas de compra/venda
+</code></pre></div>
+<h3 id="configuracao-de-rota-no-gateway">Configuração de Rota no Gateway</h3>
+<p><strong>Arquivo:</strong> <code>api/gateway-service/src/main/resources/application.yaml</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nt">spring</span><span class="p">:</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">  </span><span class="nt">cloud</span><span class="p">:</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="nt">gateway</span><span class="p">:</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">      </span><span class="nt">routes</span><span class="p">:</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exchange</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">          </span><span class="nt">uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://exchange:80</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="w">          </span><span class="nt">predicates</span><span class="p">:</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Path=/exchange/**</span>
+</code></pre></div>
+<hr>
+<h2 id="documentacao-interativa">Documentação Interativa</h2>
+<p>A API fornece documentação interativa gerada automaticamente pelo FastAPI:</p>
+<ul>
+<li><strong>Swagger UI:</strong> <code>http://localhost:8000/docs</code></li>
+<li><strong>ReDoc:</strong> <code>http://localhost:8000/redoc</code></li>
+</ul>
+<p>Essas interfaces permitem testar os endpoints diretamente no navegador.</p>
+<hr>
+<h2 id="logging">Logging</h2>
+<p>A aplicação utiliza o módulo <code>logging</code> do Python para registrar eventos:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">logging</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>Eventos logados:</strong>
+- Requisições recebidas
+- Chamadas à API externa
+- Erros e exceções
+- Timeouts e falhas de comunicação</p>
+<hr>
+<h2 id="recursos-do-kubernetes">Recursos do Kubernetes</h2>
+<h3 id="deployment">Deployment</h3>
+<ul>
+<li><strong>Replicas:</strong> 1</li>
+<li><strong>Image:</strong> <code>deenaelorra/exchange:latest</code></li>
+<li><strong>Container Port:</strong> 8000</li>
+<li><strong>Resources:</strong></li>
+<li><strong>Requests:</strong> 100Mi RAM, 50m CPU</li>
+<li><strong>Limits:</strong> 200Mi RAM, 200m CPU</li>
+</ul>
+<h3 id="service">Service</h3>
+<ul>
+<li><strong>Type:</strong> ClusterIP (acesso interno ao cluster)</li>
+<li><strong>Port:</strong> 80 (externo) → 8000 (container)</li>
+<li><strong>Selector:</strong> <code>app: exchange</code></li>
+</ul>
+<hr>
+<h2 id="exemplos-de-uso">Exemplos de Uso</h2>
+<h3 id="obter-taxa-usd-para-brl">Obter Taxa USD para BRL</h3>
+<p><strong>Request:</strong>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span><span class="s2">"http://localhost:8000/exchange/USD/BRL"</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">  </span>-H<span class="w"> </span><span class="s2">"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">  </span>-H<span class="w"> </span><span class="s2">"id-account: 550e8400-e29b-41d4-a716-446655440000"</span>
+</code></pre></div><p></p>
+<p><strong>Response:</strong>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="p">{</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">  </span><span class="nt">"buy"</span><span class="p">:</span><span class="w"> </span><span class="mf">5.2575</span><span class="p">,</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">  </span><span class="nt">"sell"</span><span class="p">:</span><span class="w"> </span><span class="mf">5.1825</span><span class="p">,</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="w">  </span><span class="nt">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-10-31 14:30:45"</span><span class="p">,</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="w">  </span><span class="nt">"account_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"550e8400-e29b-41d4-a716-446655440000"</span><span class="p">,</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="w">  </span><span class="nt">"base_rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">5.22</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="p">}</span>
+</code></pre></div><p></p>
+<h3 id="obter-taxa-eur-para-usd">Obter Taxa EUR para USD</h3>
+<p><strong>Request:</strong>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span><span class="s2">"http://localhost:8000/exchange/EUR/USD"</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">  </span>-H<span class="w"> </span><span class="s2">"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">  </span>-H<span class="w"> </span><span class="s2">"id-account: 550e8400-e29b-41d4-a716-446655440000"</span>
+</code></pre></div><p></p>
+<p><strong>Response:</strong>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="p">{</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">  </span><span class="nt">"buy"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.0959</span><span class="p">,</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">  </span><span class="nt">"sell"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.0791</span><span class="p">,</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="w">  </span><span class="nt">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-10-31 14:32:10"</span><span class="p">,</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="w">  </span><span class="nt">"account_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"550e8400-e29b-41d4-a716-446655440000"</span><span class="p">,</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="w">  </span><span class="nt">"base_rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.0875</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="p">}</span>
+</code></pre></div><p></p>
+<hr>
+<h2 id="monitoramento">Monitoramento</h2>
+<h3 id="health-check-endpoint">Health Check Endpoint</h3>
+<p>O endpoint <code>/health</code> pode ser usado para:
+- <strong>Liveness Probe</strong> no Kubernetes
+- <strong>Readiness Probe</strong> no Kubernetes
+- <strong>Monitoramento externo</strong> (uptime checks)</p>
+<p><strong>Exemplo de Liveness Probe:</strong>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="nt">livenessProbe</span><span class="p">:</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">  </span><span class="nt">httpGet</span><span class="p">:</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">    </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/health</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8000</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="w">  </span><span class="nt">initialDelaySeconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="w">  </span><span class="nt">periodSeconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+</code></pre></div><p></p>
+<hr>
+<h2 id="moedas-suportadas">Moedas Suportadas</h2>
+<p>A API suporta qualquer par de moedas disponível na Awesome API, incluindo:</p>
+<h3 id="principais-moedas">Principais Moedas</h3>
+<ul>
+<li><strong>USD</strong> - Dólar Americano</li>
+<li><strong>BRL</strong> - Real Brasileiro</li>
+<li><strong>EUR</strong> - Euro</li>
+<li><strong>GBP</strong> - Libra Esterlina</li>
+<li><strong>JPY</strong> - Iene Japonês</li>
+<li><strong>AUD</strong> - Dólar Australiano</li>
+<li><strong>CAD</strong> - Dólar Canadense</li>
+<li><strong>CHF</strong> - Franco Suíço</li>
+<li><strong>ARS</strong> - Peso Argentino</li>
+<li><strong>BTC</strong> - Bitcoin</li>
+</ul>
+<p>Para ver a lista completa de moedas suportadas, consulte: https://docs.awesomeapi.com.br</p>
+<hr>
+<h2 id="limitacoes-e-consideracoes">Limitações e Considerações</h2>
+<ol>
+<li><strong>Rate Limiting:</strong> A API externa pode ter limites de requisições</li>
+<li><strong>Disponibilidade:</strong> Dependente da disponibilidade da Awesome API</li>
+<li><strong>Timeout:</strong> Requisições com mais de 10 segundos são canceladas</li>
+<li><strong>Autenticação Obrigatória:</strong> Todos os endpoints de câmbio requerem autenticação</li>
+<li><strong>Spread Fixo:</strong> O spread de 1.5% é fixo e não configurável via API</li>
+</ol>
+<hr>
+<h2 id="licenca">Licença</h2>
+<p>[Adicione informações sobre a licença do projeto]</p>
+<hr>
+<h2 id="contato">Contato</h2>
+<p>[Adicione informações de contato ou contribuição]</p>
 
 
 
@@ -573,7 +2068,7 @@
     <span class="md-icon" title="Última atualização">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="31 de outubro de 2025 14:58:31 UTC">31 de outubro de 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2 de novembro de 2025 15:24:38 UTC">2 de novembro de 2025</span>
   </span>
 
     

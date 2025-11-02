@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
     
     
       
@@ -91,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#roteiro-4" class="md-skip">
+        <a href="#jenkins-cicd-documentacao" class="md-skip">
           Ir para o conteúdo
         </a>
       
@@ -443,6 +443,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Roteiro 4
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -454,6 +467,592 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#visao-geral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visão Geral
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estrutura-do-projeto-jenkins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estrutura do Projeto Jenkins
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pipelines-configurados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pipelines Configurados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pipelines Configurados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apis-de-interface-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      APIs de Interface (Libraries)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="APIs de Interface (Libraries)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-account-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Account API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-auth-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Auth API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-product-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Product API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-order-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Order API
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servicos-com-docker-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Serviços com Docker (Services)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Serviços com Docker (Services)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5-product-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Product Service
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-order-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Order Service
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-account-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Account Service
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-auth-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Auth Service
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-gateway-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Gateway Service
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-exchange-service-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Exchange Service (Python)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grafo-de-dependencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grafo de Dependências
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracao-do-jenkins-com-docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuração do Jenkins com Docker Compose
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuração do Jenkins com Docker Compose">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arquivo-jenkinscomposeyaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arquivo: jenkins/compose.yaml
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executar-jenkins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executar Jenkins
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screenshots-do-jenkins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Screenshots do Jenkins
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Screenshots do Jenkins">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dashboard-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dashboard Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lista-de-jobspipelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lista de Jobs/Pipelines
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipeline-em-execucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pipeline em Execução
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-concluido-com-sucesso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build Concluído com Sucesso
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credenciais-do-docker-hub" class="md-nav__link">
+    <span class="md-ellipsis">
+      Credenciais do Docker Hub
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Credenciais do Docker Hub">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracao-no-jenkins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuração no Jenkins
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screenshot-da-configuracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Screenshot da Configuração
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-adicionar-credenciais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Como Adicionar Credenciais
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#imagens-docker-publicadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Imagens Docker Publicadas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-multi-plataforma-com-docker-buildx" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build Multi-Plataforma com Docker Buildx
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Build Multi-Plataforma com Docker Buildx">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comandos-utilizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comandos Utilizados
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fluxo-de-cicd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo de CI/CD
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fluxo de CI/CD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-commit-no-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Commit no Git
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-trigger-do-jenkins" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Trigger do Jenkins
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-execucao-da-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Execução da Pipeline
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-deploy-manual-ou-automatico" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Deploy (Manual ou Automático)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jobs-configurados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jobs Configurados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Jobs Configurados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resumo-de-todos-os-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resumo de Todos os Jobs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracao-de-seguranca" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuração de Segurança
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuração de Segurança">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#autenticacao-e-autorizacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autenticação e Autorização
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credenciais-criptografadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Credenciais Criptografadas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comandos-uteis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comandos Úteis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comandos Úteis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gerenciar-jenkins-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gerenciar Jenkins Container
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gerenciar-builds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gerenciar Builds
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-hub" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker Hub
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problema-build-falha-por-falta-de-dependencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: Build falha por falta de dependência
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-docker-hub-push-falha" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: Docker Hub push falha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-multi-platform-build-falha" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: Multi-platform build falha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-permissao-negada-ao-acessar-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: Permissão negada ao acessar Docker
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#melhorias-futuras" class="md-nav__link">
+    <span class="md-ellipsis">
+      Melhorias Futuras
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnologias-utilizadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tecnologias Utilizadas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repositorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repositórios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#licenca" class="md-nav__link">
+    <span class="md-ellipsis">
+      Licença
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contato" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contato
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -532,6 +1131,581 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#visao-geral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visão Geral
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estrutura-do-projeto-jenkins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estrutura do Projeto Jenkins
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pipelines-configurados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pipelines Configurados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pipelines Configurados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apis-de-interface-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      APIs de Interface (Libraries)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="APIs de Interface (Libraries)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-account-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Account API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-auth-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Auth API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-product-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Product API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-order-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Order API
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servicos-com-docker-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Serviços com Docker (Services)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Serviços com Docker (Services)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5-product-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Product Service
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-order-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Order Service
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-account-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Account Service
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-auth-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Auth Service
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-gateway-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Gateway Service
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-exchange-service-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Exchange Service (Python)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grafo-de-dependencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grafo de Dependências
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracao-do-jenkins-com-docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuração do Jenkins com Docker Compose
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuração do Jenkins com Docker Compose">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arquivo-jenkinscomposeyaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arquivo: jenkins/compose.yaml
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executar-jenkins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executar Jenkins
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screenshots-do-jenkins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Screenshots do Jenkins
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Screenshots do Jenkins">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dashboard-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dashboard Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lista-de-jobspipelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lista de Jobs/Pipelines
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipeline-em-execucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pipeline em Execução
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-concluido-com-sucesso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build Concluído com Sucesso
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credenciais-do-docker-hub" class="md-nav__link">
+    <span class="md-ellipsis">
+      Credenciais do Docker Hub
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Credenciais do Docker Hub">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracao-no-jenkins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuração no Jenkins
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screenshot-da-configuracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Screenshot da Configuração
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-adicionar-credenciais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Como Adicionar Credenciais
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#imagens-docker-publicadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Imagens Docker Publicadas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-multi-plataforma-com-docker-buildx" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build Multi-Plataforma com Docker Buildx
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Build Multi-Plataforma com Docker Buildx">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comandos-utilizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comandos Utilizados
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fluxo-de-cicd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo de CI/CD
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fluxo de CI/CD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-commit-no-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Commit no Git
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-trigger-do-jenkins" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Trigger do Jenkins
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-execucao-da-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Execução da Pipeline
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-deploy-manual-ou-automatico" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Deploy (Manual ou Automático)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jobs-configurados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jobs Configurados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Jobs Configurados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resumo-de-todos-os-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resumo de Todos os Jobs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracao-de-seguranca" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuração de Segurança
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuração de Segurança">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#autenticacao-e-autorizacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autenticação e Autorização
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credenciais-criptografadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Credenciais Criptografadas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comandos-uteis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comandos Úteis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comandos Úteis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gerenciar-jenkins-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gerenciar Jenkins Container
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gerenciar-builds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gerenciar Builds
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-hub" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker Hub
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problema-build-falha-por-falta-de-dependencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: Build falha por falta de dependência
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-docker-hub-push-falha" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: Docker Hub push falha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-multi-platform-build-falha" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: Multi-platform build falha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-permissao-negada-ao-acessar-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: Permissão negada ao acessar Docker
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#melhorias-futuras" class="md-nav__link">
+    <span class="md-ellipsis">
+      Melhorias Futuras
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnologias-utilizadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tecnologias Utilizadas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repositorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repositórios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#licenca" class="md-nav__link">
+    <span class="md-ellipsis">
+      Licença
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contato" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contato
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -549,8 +1723,823 @@
   
 
 
-<h1 id="roteiro-4">Roteiro 4</h1>
-<p>Conteúdo do Roteiro 4 será adicionado aqui.</p>
+<h1 id="jenkins-cicd-documentacao">Jenkins CI/CD - Documentação</h1>
+<h2 id="visao-geral">Visão Geral</h2>
+<p>O <strong>Jenkins</strong> é a plataforma de CI/CD (Continuous Integration/Continuous Deployment) utilizada neste projeto para automatizar o processo de build, teste e deploy dos microserviços. A configuração implementa pipelines declarativos para 10 componentes da aplicação (4 APIs de interface e 6 serviços), incluindo build de dependências, compilação Maven, criação de imagens Docker multi-plataforma (linux/amd64 e linux/arm64) e push automático para o Docker Hub. O Jenkins está containerizado com Docker Compose, inclui ferramentas como Maven, Docker CE e kubectl v1.30, e gerencia credenciais criptografadas para integração segura com o Docker Hub.</p>
+<hr>
+<h2 id="estrutura-do-projeto-jenkins">Estrutura do Projeto Jenkins</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>📁 jenkins/
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── 📄 compose.yaml
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>└── 📁 config/
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    └── 📁 jenkins/
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        ├── 📄 config.xml
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        ├── 📄 credentials.xml
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        ├── 📁 jobs/
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        │   ├── 📁 account/
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        │   │   └── 📄 config.xml
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        │   ├── 📁 accountservice/
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        │   │   └── 📄 config.xml
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        │   ├── 📁 auth/
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        │   │   └── 📄 config.xml
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>        │   ├── 📁 auth-service/
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>        │   │   └── 📄 config.xml
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>        │   ├── 📁 exchange/
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>        │   │   └── 📄 config.xml
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>        │   ├── 📁 gateway/
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>        │   │   └── 📄 config.xml
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>        │   ├── 📁 order/
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>        │   │   └── 📄 config.xml
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>        │   ├── 📁 order-service/
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>        │   │   └── 📄 config.xml
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>        │   ├── 📁 product/
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>        │   │   └── 📄 config.xml
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>        │   └── 📁 product-service/
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>        │       └── 📄 config.xml
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>        └── 📁 plugins/
+</code></pre></div>
+<hr>
+<h2 id="pipelines-configurados">Pipelines Configurados</h2>
+<h3 id="apis-de-interface-libraries">APIs de Interface (Libraries)</h3>
+<p>Estes jobs compilam as bibliotecas compartilhadas que serão usadas como dependências pelos serviços.</p>
+<h4 id="1-account-api">1. Account API</h4>
+<p><strong>Jenkinsfile:</strong> <code>api/account/Jenkinsfile</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">pipeline</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">agent</span><span class="w"> </span><span class="n">any</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="n">stages</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">        </span><span class="n">stage</span><span class="o">(</span><span class="s1">'Build'</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">            </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">                </span><span class="n">sh</span><span class="w"> </span><span class="s1">'mvn -B -DskipTests clean install'</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">            </span><span class="o">}</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">        </span><span class="o">}</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="o">}</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="o">}</span>
+</code></pre></div>
+<p><strong>Funcionalidade:</strong>
+- Compila a biblioteca Account API
+- Instala no repositório Maven local
+- Pula testes para acelerar o build
+- Será usada como dependência pelo Account Service</p>
+<hr>
+<h4 id="2-auth-api">2. Auth API</h4>
+<p><strong>Jenkinsfile:</strong> <code>api/auth/Jenkinsfile</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">pipeline</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">agent</span><span class="w"> </span><span class="n">any</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="n">stages</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">        </span><span class="n">stage</span><span class="o">(</span><span class="s1">'Build'</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">            </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">                </span><span class="n">sh</span><span class="w"> </span><span class="s1">'mvn -B -DskipTests clean install'</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">            </span><span class="o">}</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">        </span><span class="o">}</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="o">}</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="o">}</span>
+</code></pre></div>
+<p><strong>Funcionalidade:</strong>
+- Compila a biblioteca Auth API
+- Instala no repositório Maven local
+- Será usada como dependência pelo Auth Service</p>
+<hr>
+<h4 id="3-product-api">3. Product API</h4>
+<p><strong>Jenkinsfile:</strong> <code>api/product/Jenkinsfile</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">pipeline</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">agent</span><span class="w"> </span><span class="n">any</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="n">stages</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">        </span><span class="n">stage</span><span class="o">(</span><span class="s1">'Build'</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">            </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">                </span><span class="n">sh</span><span class="w"> </span><span class="s1">'mvn -B -DskipTests clean install'</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">            </span><span class="o">}</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">        </span><span class="o">}</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="o">}</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="o">}</span>
+</code></pre></div>
+<p><strong>Funcionalidade:</strong>
+- Compila a biblioteca Product API (FeignClient)
+- Instala no repositório Maven local
+- Será usada como dependência pelo Product Service e Order Service</p>
+<hr>
+<h4 id="4-order-api">4. Order API</h4>
+<p><strong>Jenkinsfile:</strong> <code>api/order/Jenkinsfile</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">pipeline</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n">agent</span><span class="w"> </span><span class="n">any</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="n">stages</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">        </span><span class="n">stage</span><span class="o">(</span><span class="s1">'Build'</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">            </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">                </span><span class="n">sh</span><span class="w"> </span><span class="s1">'mvn -B -DskipTests clean install'</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">            </span><span class="o">}</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">        </span><span class="o">}</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="o">}</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="o">}</span>
+</code></pre></div>
+<p><strong>Funcionalidade:</strong>
+- Compila a biblioteca Order API (FeignClient)
+- Instala no repositório Maven local
+- Será usada como dependência pelo Order Service</p>
+<hr>
+<h3 id="servicos-com-docker-services">Serviços com Docker (Services)</h3>
+<p>Estes jobs compilam os serviços, criam imagens Docker multi-plataforma e fazem push para o Docker Hub.</p>
+<h4 id="5-product-service">5. Product Service</h4>
+<p><strong>Jenkinsfile:</strong> <code>api/product_service/Jenkinsfile</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">pipeline</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="n">agent</span><span class="w"> </span><span class="n">any</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="n">environment</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">        </span><span class="n">SERVICE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'product'</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">        </span><span class="n">NAME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"deenaelorra/${env.SERVICE}"</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="o">}</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="n">stages</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">        </span><span class="n">stage</span><span class="o">(</span><span class="s1">'Dependencies'</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">            </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">                </span><span class="n">build</span><span class="w"> </span><span class="nl">job:</span><span class="w"> </span><span class="s1">'product'</span><span class="o">,</span><span class="w"> </span><span class="nl">wait:</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">            </span><span class="o">}</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">        </span><span class="o">}</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">        </span><span class="n">stage</span><span class="o">(</span><span class="s1">'Build'</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">            </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">                </span><span class="n">sh</span><span class="w"> </span><span class="s1">'mvn -B -DskipTests clean package'</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">            </span><span class="o">}</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">        </span><span class="o">}</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">        </span><span class="n">stage</span><span class="o">(</span><span class="s1">'Build &amp; Push Image'</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="w">            </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="w">                </span><span class="n">withCredentials</span><span class="o">([</span><span class="n">usernamePassword</span><span class="o">(</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="w">                    </span><span class="nl">credentialsId:</span><span class="w"> </span><span class="s1">'dockerhub-credential'</span><span class="o">,</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="w">                    </span><span class="nl">usernameVariable:</span><span class="w"> </span><span class="s1">'USERNAME'</span><span class="o">,</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="w">                    </span><span class="nl">passwordVariable:</span><span class="w"> </span><span class="s1">'TOKEN'</span><span class="o">)])</span>
+<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="w">                </span><span class="o">{</span>
+<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="w">                    </span><span class="n">sh</span><span class="w"> </span><span class="s2">"docker login -u $USERNAME -p $TOKEN"</span>
+<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="w">                    </span><span class="n">sh</span><span class="w"> </span><span class="s2">"docker buildx create --use --platform=linux/arm64,linux/amd64 --node multi-platform-builder-${env.SERVICE} --name multi-platform-builder-${env.SERVICE}"</span>
+<a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a><span class="w">                    </span><span class="n">sh</span><span class="w"> </span><span class="s2">"docker buildx build --platform=linux/arm64,linux/amd64 --push --tag ${env.NAME}:latest --tag ${env.NAME}:${env.BUILD_ID} -f Dockerfile ."</span>
+<a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a><span class="w">                    </span><span class="n">sh</span><span class="w"> </span><span class="s2">"docker buildx rm --force multi-platform-builder-${env.SERVICE}"</span>
+<a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a><span class="w">                </span><span class="o">}</span>
+<a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a><span class="w">            </span><span class="o">}</span>
+<a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a><span class="w">        </span><span class="o">}</span>
+<a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a><span class="w">    </span><span class="o">}</span>
+<a id="__codelineno-5-33" name="__codelineno-5-33" href="#__codelineno-5-33"></a><span class="o">}</span>
+</code></pre></div>
+<p><strong>Funcionalidade:</strong>
+- <strong>Stage 1 - Dependencies</strong>: Executa o build do job 'product' (API) e aguarda conclusão
+- <strong>Stage 2 - Build</strong>: Compila o serviço com Maven (pula testes)
+- <strong>Stage 3 - Build &amp; Push Image</strong>:
+  - Login no Docker Hub com credenciais seguras
+  - Cria builder multi-plataforma (ARM64 + AMD64)
+  - Gera imagem Docker para ambas as arquiteturas
+  - Push para Docker Hub com tags <code>:latest</code> e <code>:BUILD_ID</code>
+  - Remove o builder temporário</p>
+<p><strong>Docker Hub:</strong> <code>deenaelorra/product:latest</code> e <code>deenaelorra/product:{BUILD_ID}</code></p>
+<hr>
+<h4 id="6-order-service">6. Order Service</h4>
+<p><strong>Jenkinsfile:</strong> <code>api/order_service/Jenkinsfile</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">pipeline</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="n">agent</span><span class="w"> </span><span class="n">any</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="n">environment</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">        </span><span class="n">SERVICE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'order'</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">        </span><span class="n">NAME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"deenaelorra/${env.SERVICE}"</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="o">}</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="n">stages</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">        </span><span class="n">stage</span><span class="o">(</span><span class="s1">'Dependencies'</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">            </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">                </span><span class="n">build</span><span class="w"> </span><span class="nl">job:</span><span class="w"> </span><span class="s1">'product'</span><span class="o">,</span><span class="w"> </span><span class="nl">wait:</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">                </span><span class="n">build</span><span class="w"> </span><span class="nl">job:</span><span class="w"> </span><span class="s1">'order'</span><span class="o">,</span><span class="w"> </span><span class="nl">wait:</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">            </span><span class="o">}</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">        </span><span class="o">}</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">        </span><span class="n">stage</span><span class="o">(</span><span class="s1">'Build'</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">            </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">                </span><span class="n">sh</span><span class="w"> </span><span class="s1">'mvn -B -DskipTests clean package'</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="w">            </span><span class="o">}</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="w">        </span><span class="o">}</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="w">        </span><span class="n">stage</span><span class="o">(</span><span class="s1">'Build &amp; Push Image'</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="w">            </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="w">                </span><span class="n">withCredentials</span><span class="o">([</span><span class="n">usernamePassword</span><span class="o">(</span>
+<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="w">                    </span><span class="nl">credentialsId:</span><span class="w"> </span><span class="s1">'dockerhub-credential'</span><span class="o">,</span>
+<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a><span class="w">                    </span><span class="nl">usernameVariable:</span><span class="w"> </span><span class="s1">'USERNAME'</span><span class="o">,</span>
+<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a><span class="w">                    </span><span class="nl">passwordVariable:</span><span class="w"> </span><span class="s1">'TOKEN'</span><span class="o">)])</span>
+<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a><span class="w">                </span><span class="o">{</span>
+<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a><span class="w">                    </span><span class="n">sh</span><span class="w"> </span><span class="s2">"docker login -u $USERNAME -p $TOKEN"</span>
+<a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a><span class="w">                    </span><span class="n">sh</span><span class="w"> </span><span class="s2">"docker buildx create --use --platform=linux/arm64,linux/amd64 --node multi-platform-builder-${env.SERVICE} --name multi-platform-builder-${env.SERVICE}"</span>
+<a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a><span class="w">                    </span><span class="n">sh</span><span class="w"> </span><span class="s2">"docker buildx build --platform=linux/arm64,linux/amd64 --push --tag ${env.NAME}:latest --tag ${env.NAME}:${env.BUILD_ID} -f Dockerfile ."</span>
+<a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a><span class="w">                    </span><span class="n">sh</span><span class="w"> </span><span class="s2">"docker buildx rm --force multi-platform-builder-${env.SERVICE}"</span>
+<a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a><span class="w">                </span><span class="o">}</span>
+<a id="__codelineno-6-31" name="__codelineno-6-31" href="#__codelineno-6-31"></a><span class="w">            </span><span class="o">}</span>
+<a id="__codelineno-6-32" name="__codelineno-6-32" href="#__codelineno-6-32"></a><span class="w">        </span><span class="o">}</span>
+<a id="__codelineno-6-33" name="__codelineno-6-33" href="#__codelineno-6-33"></a><span class="w">    </span><span class="o">}</span>
+<a id="__codelineno-6-34" name="__codelineno-6-34" href="#__codelineno-6-34"></a><span class="o">}</span>
+</code></pre></div>
+<p><strong>Funcionalidade:</strong>
+- <strong>Dependencies</strong>: Compila 'product' e 'order' APIs sequencialmente
+- <strong>Build</strong>: Compila o Order Service
+- <strong>Build &amp; Push Image</strong>: Gera e publica imagem Docker multi-plataforma</p>
+<p><strong>Docker Hub:</strong> <code>deenaelorra/order:latest</code> e <code>deenaelorra/order:{BUILD_ID}</code></p>
+<hr>
+<h4 id="7-account-service">7. Account Service</h4>
+<p><strong>Jenkinsfile:</strong> <code>api/accountservice/Jenkinsfile</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">pipeline</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="n">agent</span><span class="w"> </span><span class="n">any</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="n">environment</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">        </span><span class="n">SERVICE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'accountservice'</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">        </span><span class="n">NAME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"deenaelorra/${env.SERVICE}"</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="o">}</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="n">stages</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">        </span><span class="n">stage</span><span class="o">(</span><span class="s1">'Dependencies'</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">            </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">                </span><span class="n">build</span><span class="w"> </span><span class="nl">job:</span><span class="w"> </span><span class="s1">'account'</span><span class="o">,</span><span class="w"> </span><span class="nl">wait:</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">            </span><span class="o">}</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">        </span><span class="o">}</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">        </span><span class="n">stage</span><span class="o">(</span><span class="s1">'Build'</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">            </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">                </span><span class="n">sh</span><span class="w"> </span><span class="s1">'mvn -B -DskipTests clean package'</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="w">            </span><span class="o">}</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="w">        </span><span class="o">}</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="w">        </span><span class="n">stage</span><span class="o">(</span><span class="s1">'Build &amp; Push Image'</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="w">            </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="w">                </span><span class="n">withCredentials</span><span class="o">([</span><span class="n">usernamePassword</span><span class="o">(</span>
+<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="w">                    </span><span class="nl">credentialsId:</span><span class="w"> </span><span class="s1">'dockerhub-credential'</span><span class="o">,</span>
+<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="w">                    </span><span class="nl">usernameVariable:</span><span class="w"> </span><span class="s1">'USERNAME'</span><span class="o">,</span>
+<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="w">                    </span><span class="nl">passwordVariable:</span><span class="w"> </span><span class="s1">'TOKEN'</span><span class="o">)])</span>
+<a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a><span class="w">                </span><span class="o">{</span>
+<a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a><span class="w">                    </span><span class="n">sh</span><span class="w"> </span><span class="s2">"docker login -u $USERNAME -p $TOKEN"</span>
+<a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a><span class="w">                    </span><span class="n">sh</span><span class="w"> </span><span class="s2">"docker buildx create --use --platform=linux/arm64,linux/amd64 --node multi-platform-builder-${env.SERVICE} --name multi-platform-builder-${env.SERVICE}"</span>
+<a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a><span class="w">                    </span><span class="n">sh</span><span class="w"> </span><span class="s2">"docker buildx build --platform=linux/arm64,linux/amd64 --push --tag ${env.NAME}:latest --tag ${env.NAME}:${env.BUILD_ID} -f Dockerfile ."</span>
+<a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a><span class="w">                    </span><span class="n">sh</span><span class="w"> </span><span class="s2">"docker buildx rm --force multi-platform-builder-${env.SERVICE}"</span>
+<a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a><span class="w">                </span><span class="o">}</span>
+<a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a><span class="w">            </span><span class="o">}</span>
+<a id="__codelineno-7-31" name="__codelineno-7-31" href="#__codelineno-7-31"></a><span class="w">        </span><span class="o">}</span>
+<a id="__codelineno-7-32" name="__codelineno-7-32" href="#__codelineno-7-32"></a><span class="w">    </span><span class="o">}</span>
+<a id="__codelineno-7-33" name="__codelineno-7-33" href="#__codelineno-7-33"></a><span class="o">}</span>
+</code></pre></div>
+<p><strong>Docker Hub:</strong> <code>deenaelorra/accountservice:latest</code> e <code>deenaelorra/accountservice:{BUILD_ID}</code></p>
+<hr>
+<h4 id="8-auth-service">8. Auth Service</h4>
+<p><strong>Jenkinsfile:</strong> <code>api/auth_service/Jenkinsfile</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">pipeline</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="n">agent</span><span class="w"> </span><span class="n">any</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="n">environment</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">        </span><span class="n">SERVICE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'auth-service'</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">        </span><span class="n">NAME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"deenaelorra/${env.SERVICE}"</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span><span class="o">}</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="n">stages</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">        </span><span class="n">stage</span><span class="o">(</span><span class="s1">'Dependencies'</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">            </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">                </span><span class="n">build</span><span class="w"> </span><span class="nl">job:</span><span class="w"> </span><span class="s1">'account'</span><span class="o">,</span><span class="w"> </span><span class="nl">wait:</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">                </span><span class="n">build</span><span class="w"> </span><span class="nl">job:</span><span class="w"> </span><span class="s1">'auth'</span><span class="o">,</span><span class="w"> </span><span class="nl">wait:</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">            </span><span class="o">}</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">        </span><span class="o">}</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">        </span><span class="n">stage</span><span class="o">(</span><span class="s1">'Build'</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="w">            </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="w">                </span><span class="n">sh</span><span class="w"> </span><span class="s1">'mvn -B -DskipTests clean package'</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="w">            </span><span class="o">}</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="w">        </span><span class="o">}</span>
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="w">        </span><span class="n">stage</span><span class="o">(</span><span class="s1">'Build &amp; Push Image'</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="w">            </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="w">                </span><span class="n">withCredentials</span><span class="o">([</span><span class="n">usernamePassword</span><span class="o">(</span>
+<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="w">                    </span><span class="nl">credentialsId:</span><span class="w"> </span><span class="s1">'dockerhub-credential'</span><span class="o">,</span>
+<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a><span class="w">                    </span><span class="nl">usernameVariable:</span><span class="w"> </span><span class="s1">'USERNAME'</span><span class="o">,</span>
+<a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a><span class="w">                    </span><span class="nl">passwordVariable:</span><span class="w"> </span><span class="s1">'TOKEN'</span><span class="o">)])</span>
+<a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a><span class="w">                </span><span class="o">{</span>
+<a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a><span class="w">                    </span><span class="n">sh</span><span class="w"> </span><span class="s2">"docker login -u $USERNAME -p $TOKEN"</span>
+<a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a><span class="w">                    </span><span class="n">sh</span><span class="w"> </span><span class="s2">"docker buildx create --use --platform=linux/arm64,linux/amd64 --node multi-platform-builder-${env.SERVICE} --name multi-platform-builder-${env.SERVICE}"</span>
+<a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a><span class="w">                    </span><span class="n">sh</span><span class="w"> </span><span class="s2">"docker buildx build --platform=linux/arm64,linux/amd64 --push --tag ${env.NAME}:latest --tag ${env.NAME}:${env.BUILD_ID} -f Dockerfile ."</span>
+<a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a><span class="w">                    </span><span class="n">sh</span><span class="w"> </span><span class="s2">"docker buildx rm --force multi-platform-builder-${env.SERVICE}"</span>
+<a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a><span class="w">                </span><span class="o">}</span>
+<a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a><span class="w">            </span><span class="o">}</span>
+<a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a><span class="w">        </span><span class="o">}</span>
+<a id="__codelineno-8-33" name="__codelineno-8-33" href="#__codelineno-8-33"></a><span class="w">    </span><span class="o">}</span>
+<a id="__codelineno-8-34" name="__codelineno-8-34" href="#__codelineno-8-34"></a><span class="o">}</span>
+</code></pre></div>
+<p><strong>Docker Hub:</strong> <code>deenaelorra/auth-service:latest</code> e <code>deenaelorra/auth-service:{BUILD_ID}</code></p>
+<hr>
+<h4 id="9-gateway-service">9. Gateway Service</h4>
+<p><strong>Jenkinsfile:</strong> <code>api/gateway-service/Jenkinsfile</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">pipeline</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="n">agent</span><span class="w"> </span><span class="n">any</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="n">environment</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">        </span><span class="n">SERVICE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'gateway'</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">        </span><span class="n">NAME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"deenaelorra/${env.SERVICE}"</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">    </span><span class="o">}</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">    </span><span class="n">stages</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">        </span><span class="n">stage</span><span class="o">(</span><span class="s1">'Build'</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">            </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">                </span><span class="n">sh</span><span class="w"> </span><span class="s1">'mvn -B -DskipTests clean package'</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">            </span><span class="o">}</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="w">        </span><span class="o">}</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="w">        </span><span class="n">stage</span><span class="o">(</span><span class="s1">'Build &amp; Push Image'</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="w">            </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="w">                </span><span class="n">withCredentials</span><span class="o">([</span><span class="n">usernamePassword</span><span class="o">(</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="w">                    </span><span class="nl">credentialsId:</span><span class="w"> </span><span class="s1">'dockerhub-credential'</span><span class="o">,</span>
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="w">                    </span><span class="nl">usernameVariable:</span><span class="w"> </span><span class="s1">'USERNAME'</span><span class="o">,</span>
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="w">                    </span><span class="nl">passwordVariable:</span><span class="w"> </span><span class="s1">'TOKEN'</span><span class="o">)])</span>
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a><span class="w">                </span><span class="o">{</span>
+<a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a><span class="w">                    </span><span class="n">sh</span><span class="w"> </span><span class="s2">"docker login -u $USERNAME -p $TOKEN"</span>
+<a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a><span class="w">                    </span><span class="n">sh</span><span class="w"> </span><span class="s2">"docker buildx create --use --platform=linux/arm64,linux/amd64 --node multi-platform-builder-${env.SERVICE} --name multi-platform-builder-${env.SERVICE}"</span>
+<a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a><span class="w">                    </span><span class="n">sh</span><span class="w"> </span><span class="s2">"docker buildx build --platform=linux/arm64,linux/amd64 --push --tag ${env.NAME}:latest --tag ${env.NAME}:${env.BUILD_ID} -f Dockerfile ."</span>
+<a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a><span class="w">                    </span><span class="n">sh</span><span class="w"> </span><span class="s2">"docker buildx rm --force multi-platform-builder-${env.SERVICE}"</span>
+<a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a><span class="w">                </span><span class="o">}</span>
+<a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a><span class="w">            </span><span class="o">}</span>
+<a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a><span class="w">        </span><span class="o">}</span>
+<a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a><span class="w">    </span><span class="o">}</span>
+<a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a><span class="o">}</span>
+</code></pre></div>
+<p><strong>Funcionalidade:</strong>
+- <strong>Sem Dependencies</strong>: Gateway não depende de outras APIs
+- Compila e gera imagem Docker multi-plataforma</p>
+<p><strong>Docker Hub:</strong> <code>deenaelorra/gateway:latest</code> e <code>deenaelorra/gateway:{BUILD_ID}</code></p>
+<hr>
+<h4 id="10-exchange-service-python">10. Exchange Service (Python)</h4>
+<p><strong>Jenkinsfile:</strong> <code>api/exchange/Jenkinsfile</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">pipeline</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="n">agent</span><span class="w"> </span><span class="n">any</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="n">environment</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">        </span><span class="n">SERVICE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'exchange'</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">        </span><span class="n">NAME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"deenaelorra/${env.SERVICE}"</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">    </span><span class="o">}</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">    </span><span class="n">stages</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">        </span><span class="n">stage</span><span class="o">(</span><span class="s1">'Build &amp; Push Image'</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">            </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">                </span><span class="n">withCredentials</span><span class="o">([</span><span class="n">usernamePassword</span><span class="o">(</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">                    </span><span class="nl">credentialsId:</span><span class="w"> </span><span class="s1">'dockerhub-credential'</span><span class="o">,</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">                    </span><span class="nl">usernameVariable:</span><span class="w"> </span><span class="s1">'USERNAME'</span><span class="o">,</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">                    </span><span class="nl">passwordVariable:</span><span class="w"> </span><span class="s1">'TOKEN'</span><span class="o">)])</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">                </span><span class="o">{</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="w">                    </span><span class="n">sh</span><span class="w"> </span><span class="s2">"docker login -u $USERNAME -p $TOKEN"</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="w">                    </span><span class="n">sh</span><span class="w"> </span><span class="s2">"docker buildx create --use --platform=linux/arm64,linux/amd64 --node multi-platform-builder-${env.SERVICE} --name multi-platform-builder-${env.SERVICE}"</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="w">                    </span><span class="n">sh</span><span class="w"> </span><span class="s2">"docker buildx build --platform=linux/arm64,linux/amd64 --push --tag ${env.NAME}:latest --tag ${env.NAME}:${env.BUILD_ID} -f Dockerfile ."</span>
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="w">                    </span><span class="n">sh</span><span class="w"> </span><span class="s2">"docker buildx rm --force multi-platform-builder-${env.SERVICE}"</span>
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="w">                </span><span class="o">}</span>
+<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="w">            </span><span class="o">}</span>
+<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="w">        </span><span class="o">}</span>
+<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="w">    </span><span class="o">}</span>
+<a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="o">}</span>
+</code></pre></div>
+<p><strong>Funcionalidade:</strong>
+- <strong>Sem Maven Build</strong>: Aplicação Python/FastAPI não requer compilação Java
+- Apenas cria e publica imagem Docker multi-plataforma</p>
+<p><strong>Docker Hub:</strong> <code>deenaelorra/exchange:latest</code> e <code>deenaelorra/exchange:{BUILD_ID}</code></p>
+<hr>
+<h2 id="grafo-de-dependencias">Grafo de Dependências</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>┌─────────────────────────────────────────────────────────┐
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>│                    JENKINS PIPELINE                     │
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>└─────────────────────────────────────────────────────────┘
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>┌──────────────┐
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>│  account API │ ────┐
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>└──────────────┘     │
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>                     ├──&gt; ┌──────────────────┐
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>                     │    │ accountservice   │ ──&gt; Docker Hub
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>                     │    └──────────────────┘
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>┌──────────────┐     │
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>│   auth API   │ ────┤
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>└──────────────┘     │
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>                     └──&gt; ┌──────────────────┐
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>                          │  auth-service    │ ──&gt; Docker Hub
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>                          └──────────────────┘
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>┌──────────────┐
+<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>│ product API  │ ────┬──&gt; ┌──────────────────┐
+<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>└──────────────┘     │    │ product-service  │ ──&gt; Docker Hub
+<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a>                     │    └──────────────────┘
+<a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a>┌──────────────┐     │
+<a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a>│  order API   │ ────┴──&gt; ┌──────────────────┐
+<a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a>└──────────────┘          │  order-service   │ ──&gt; Docker Hub
+<a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a>                          └──────────────────┘
+<a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a>
+<a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a>                          ┌──────────────────┐
+<a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a>                          │     gateway      │ ──&gt; Docker Hub
+<a id="__codelineno-11-29" name="__codelineno-11-29" href="#__codelineno-11-29"></a>                          └──────────────────┘
+<a id="__codelineno-11-30" name="__codelineno-11-30" href="#__codelineno-11-30"></a>
+<a id="__codelineno-11-31" name="__codelineno-11-31" href="#__codelineno-11-31"></a>                          ┌──────────────────┐
+<a id="__codelineno-11-32" name="__codelineno-11-32" href="#__codelineno-11-32"></a>                          │    exchange      │ ──&gt; Docker Hub
+<a id="__codelineno-11-33" name="__codelineno-11-33" href="#__codelineno-11-33"></a>                          └──────────────────┘
+</code></pre></div>
+<hr>
+<h2 id="configuracao-do-jenkins-com-docker-compose">Configuração do Jenkins com Docker Compose</h2>
+<h3 id="arquivo-jenkinscomposeyaml">Arquivo: <code>jenkins/compose.yaml</code></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># docker compose up -d --build --force-recreate</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ops</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="nt">services</span><span class="p">:</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">  </span><span class="nt">jenkins</span><span class="p">:</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">jenkins</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">    </span><span class="nt">build</span><span class="p">:</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">      </span><span class="nt">dockerfile_inline</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="w">        </span><span class="no">FROM jenkins/jenkins:jdk21</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="w">        </span><span class="no">USER root</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="w">        </span><span class="no"># Install tools</span>
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="w">        </span><span class="no">RUN apt-get update &amp;&amp; apt-get install -y lsb-release iputils-ping maven</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="w">        </span><span class="no"># Install Docker</span>
+<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="w">        </span><span class="no">RUN curl -fsSLo /usr/share/keyrings/docker-archive-keyring.asc \</span>
+<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="w">          </span><span class="no">https://download.docker.com/linux/debian/gpg</span>
+<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a><span class="w">        </span><span class="no">RUN echo "deb [arch=$(dpkg --print-architecture) \</span>
+<a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a><span class="w">          </span><span class="no">signed-by=/usr/share/keyrings/docker-archive-keyring.asc] \</span>
+<a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a><span class="w">          </span><span class="no">https://download.docker.com/linux/debian \</span>
+<a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a><span class="w">          </span><span class="no">$(lsb_release -cs) stable" &gt; /etc/apt/sources.list.d/docker.list</span>
+<a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a><span class="w">        </span><span class="no">RUN apt-get update &amp;&amp; apt-get install -y docker-ce</span>
+<a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a>
+<a id="__codelineno-12-25" name="__codelineno-12-25" href="#__codelineno-12-25"></a><span class="w">        </span><span class="no"># Install kubectl</span>
+<a id="__codelineno-12-26" name="__codelineno-12-26" href="#__codelineno-12-26"></a><span class="w">        </span><span class="no">RUN apt-get install -y apt-transport-https ca-certificates curl</span>
+<a id="__codelineno-12-27" name="__codelineno-12-27" href="#__codelineno-12-27"></a><span class="w">        </span><span class="no">RUN curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.30/deb/Release.key | gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg</span>
+<a id="__codelineno-12-28" name="__codelineno-12-28" href="#__codelineno-12-28"></a><span class="w">        </span><span class="no">RUN chmod 644 /etc/apt/keyrings/kubernetes-apt-keyring.gpg</span>
+<a id="__codelineno-12-29" name="__codelineno-12-29" href="#__codelineno-12-29"></a><span class="w">        </span><span class="no">RUN echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.30/deb/ /' | tee /etc/apt/sources.list.d/kubernetes.list</span>
+<a id="__codelineno-12-30" name="__codelineno-12-30" href="#__codelineno-12-30"></a><span class="w">        </span><span class="no">RUN chmod 644 /etc/apt/sources.list.d/kubernetes.list</span>
+<a id="__codelineno-12-31" name="__codelineno-12-31" href="#__codelineno-12-31"></a><span class="w">        </span><span class="no">RUN apt-get update &amp;&amp; apt-get install -y kubectl</span>
+<a id="__codelineno-12-32" name="__codelineno-12-32" href="#__codelineno-12-32"></a>
+<a id="__codelineno-12-33" name="__codelineno-12-33" href="#__codelineno-12-33"></a><span class="w">        </span><span class="no">RUN usermod -aG docker jenkins</span>
+<a id="__codelineno-12-34" name="__codelineno-12-34" href="#__codelineno-12-34"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-12-35" name="__codelineno-12-35" href="#__codelineno-12-35"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9080:8080</span>
+<a id="__codelineno-12-36" name="__codelineno-12-36" href="#__codelineno-12-36"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<a id="__codelineno-12-37" name="__codelineno-12-37" href="#__codelineno-12-37"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${CONFIG:-./config}/jenkins:/var/jenkins_home</span>
+<a id="__codelineno-12-38" name="__codelineno-12-38" href="#__codelineno-12-38"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/run/docker.sock:/var/run/docker.sock</span>
+<a id="__codelineno-12-39" name="__codelineno-12-39" href="#__codelineno-12-39"></a><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
+</code></pre></div>
+<p><strong>Características:</strong>
+- <strong>Imagem Base:</strong> jenkins/jenkins:jdk21
+- <strong>Porta:</strong> 9080 (host) → 8080 (container)
+- <strong>Ferramentas Instaladas:</strong>
+  - Maven (builds Java)
+  - Docker CE (builds de imagens)
+  - kubectl v1.30 (deploy Kubernetes)
+- <strong>Volumes:</strong>
+  - <code>/var/jenkins_home</code> - Dados persistentes do Jenkins
+  - <code>/var/run/docker.sock</code> - Socket Docker (Docker-in-Docker)
+- <strong>Restart Policy:</strong> always</p>
+<h3 id="executar-jenkins">Executar Jenkins</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nb">cd</span><span class="w"> </span>jenkins
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>--build<span class="w"> </span>--force-recreate
+</code></pre></div>
+<p>Acesse: <code>http://localhost:9080</code></p>
+<hr>
+<h2 id="screenshots-do-jenkins">Screenshots do Jenkins</h2>
+<h3 id="dashboard-principal">Dashboard Principal</h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="./docs/jenkins-dashboard.png" data-desc-position="bottom"><img alt="Jenkins Dashboard" src="./docs/jenkins-dashboard.png"></a></p>
+<h3 id="lista-de-jobspipelines">Lista de Jobs/Pipelines</h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="./docs/jenkins-jobs.png" data-desc-position="bottom"><img alt="Jenkins Jobs" src="./docs/jenkins-jobs.png"></a></p>
+<h3 id="pipeline-em-execucao">Pipeline em Execução</h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="./docs/jenkins-pipeline-running.png" data-desc-position="bottom"><img alt="Jenkins Pipeline Running" src="./docs/jenkins-pipeline-running.png"></a></p>
+<h3 id="build-concluido-com-sucesso">Build Concluído com Sucesso</h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="./docs/jenkins-build-success.png" data-desc-position="bottom"><img alt="Jenkins Build Success" src="./docs/jenkins-build-success.png"></a></p>
+<hr>
+<h2 id="credenciais-do-docker-hub">Credenciais do Docker Hub</h2>
+<h3 id="configuracao-no-jenkins">Configuração no Jenkins</h3>
+<p>As credenciais do Docker Hub são armazenadas de forma segura no Jenkins:</p>
+<p><strong>Credential ID:</strong> <code>dockerhub-credential</code></p>
+<p><strong>Tipo:</strong> Username with password</p>
+<p><strong>Campos:</strong>
+- <strong>Username:</strong> deenaelorra
+- <strong>Password:</strong> [Criptografado]</p>
+<h3 id="screenshot-da-configuracao">Screenshot da Configuração</h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="./docs/jenkins-dockerhub-credentials.png" data-desc-position="bottom"><img alt="Docker Hub Credentials" src="./docs/jenkins-dockerhub-credentials.png"></a></p>
+<h3 id="como-adicionar-credenciais">Como Adicionar Credenciais</h3>
+<ol>
+<li>Acesse Jenkins → Manage Jenkins → Credentials</li>
+<li>Clique em "(global)" domain</li>
+<li>Add Credentials</li>
+<li>Preencha:</li>
+<li><strong>Kind:</strong> Username with password</li>
+<li><strong>Scope:</strong> Global</li>
+<li><strong>Username:</strong> deenaelorra</li>
+<li><strong>Password:</strong> [sua senha do Docker Hub]</li>
+<li><strong>ID:</strong> dockerhub-credential</li>
+<li><strong>Description:</strong> Docker Hub Credentials</li>
+<li>Salvar</li>
+</ol>
+<hr>
+<h2 id="imagens-docker-publicadas">Imagens Docker Publicadas</h2>
+<p>Todas as imagens são publicadas no Docker Hub com duas tags:</p>
+<table>
+<thead>
+<tr>
+<th>Serviço</th>
+<th>Repositório Docker Hub</th>
+<th>Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product Service</td>
+<td><code>deenaelorra/product</code></td>
+<td><code>:latest</code>, <code>:{BUILD_ID}</code></td>
+</tr>
+<tr>
+<td>Order Service</td>
+<td><code>deenaelorra/order</code></td>
+<td><code>:latest</code>, <code>:{BUILD_ID}</code></td>
+</tr>
+<tr>
+<td>Account Service</td>
+<td><code>deenaelorra/accountservice</code></td>
+<td><code>:latest</code>, <code>:{BUILD_ID}</code></td>
+</tr>
+<tr>
+<td>Auth Service</td>
+<td><code>deenaelorra/auth-service</code></td>
+<td><code>:latest</code>, <code>:{BUILD_ID}</code></td>
+</tr>
+<tr>
+<td>Gateway</td>
+<td><code>deenaelorra/gateway</code></td>
+<td><code>:latest</code>, <code>:{BUILD_ID}</code></td>
+</tr>
+<tr>
+<td>Exchange</td>
+<td><code>deenaelorra/exchange</code></td>
+<td><code>:latest</code>, <code>:{BUILD_ID}</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Plataformas Suportadas:</strong>
+- linux/amd64 (x86-64)
+- linux/arm64 (ARM64)</p>
+<hr>
+<h2 id="build-multi-plataforma-com-docker-buildx">Build Multi-Plataforma com Docker Buildx</h2>
+<h3 id="comandos-utilizados">Comandos Utilizados</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># 1. Login no Docker Hub</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>docker<span class="w"> </span>login<span class="w"> </span>-u<span class="w"> </span><span class="nv">$USERNAME</span><span class="w"> </span>-p<span class="w"> </span><span class="nv">$TOKEN</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="c1"># 2. Criar builder multi-plataforma</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>docker<span class="w"> </span>buildx<span class="w"> </span>create<span class="w"> </span>--use<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">  </span>--platform<span class="o">=</span>linux/arm64,linux/amd64<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">  </span>--node<span class="w"> </span>multi-platform-builder-<span class="o">{</span>SERVICE<span class="o">}</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="w">  </span>--name<span class="w"> </span>multi-platform-builder-<span class="o">{</span>SERVICE<span class="o">}</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="c1"># 3. Build e push para ambas as plataformas</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>docker<span class="w"> </span>buildx<span class="w"> </span>build<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="w">  </span>--platform<span class="o">=</span>linux/arm64,linux/amd64<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="w">  </span>--push<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="w">  </span>--tag<span class="w"> </span>deenaelorra/<span class="o">{</span>SERVICE<span class="o">}</span>:latest<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="w">  </span>--tag<span class="w"> </span>deenaelorra/<span class="o">{</span>SERVICE<span class="o">}</span>:<span class="o">{</span>BUILD_ID<span class="o">}</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="w">  </span>-f<span class="w"> </span>Dockerfile<span class="w"> </span>.
+<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a>
+<a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a><span class="c1"># 4. Remover builder temporário</span>
+<a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a>docker<span class="w"> </span>buildx<span class="w"> </span>rm<span class="w"> </span>--force<span class="w"> </span>multi-platform-builder-<span class="o">{</span>SERVICE<span class="o">}</span>
+</code></pre></div>
+<p><strong>Benefícios:</strong>
+- Imagens funcionam em servidores AMD64 (Intel/AMD)
+- Imagens funcionam em Apple Silicon (M1/M2/M3)
+- Compatibilidade com ARM servers (AWS Graviton, etc.)</p>
+<hr>
+<h2 id="fluxo-de-cicd">Fluxo de CI/CD</h2>
+<h3 id="1-commit-no-git">1. Commit no Git</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Developer → git push → GitHub
+</code></pre></div>
+<h3 id="2-trigger-do-jenkins">2. Trigger do Jenkins</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>GitHub Webhook → Jenkins → Start Pipeline
+</code></pre></div>
+<h3 id="3-execucao-da-pipeline">3. Execução da Pipeline</h3>
+<p><strong>Para Libraries (account, auth, product, order):</strong>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>┌──────────────────┐
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>│   Stage: Build   │
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>│   mvn install    │
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>└──────────────────┘
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>         │
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>         v
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>    [Success]
+</code></pre></div><p></p>
+<p><strong>Para Services (product-service, order-service, etc.):</strong>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>┌──────────────────────┐
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>│ Stage: Dependencies  │
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>│  Build lib jobs      │
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>│    (wait: true)      │
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>└──────────────────────┘
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>         │
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>         v
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>┌──────────────────────┐
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>│   Stage: Build       │
+<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>│  mvn package         │
+<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a>└──────────────────────┘
+<a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a>         │
+<a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a>         v
+<a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a>┌──────────────────────┐
+<a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a>│ Stage: Build &amp; Push  │
+<a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a>│  - Docker login      │
+<a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a>│  - buildx create     │
+<a id="__codelineno-18-18" name="__codelineno-18-18" href="#__codelineno-18-18"></a>│  - buildx build      │
+<a id="__codelineno-18-19" name="__codelineno-18-19" href="#__codelineno-18-19"></a>│  - Push to Hub       │
+<a id="__codelineno-18-20" name="__codelineno-18-20" href="#__codelineno-18-20"></a>│  - buildx rm         │
+<a id="__codelineno-18-21" name="__codelineno-18-21" href="#__codelineno-18-21"></a>└──────────────────────┘
+<a id="__codelineno-18-22" name="__codelineno-18-22" href="#__codelineno-18-22"></a>         │
+<a id="__codelineno-18-23" name="__codelineno-18-23" href="#__codelineno-18-23"></a>         v
+<a id="__codelineno-18-24" name="__codelineno-18-24" href="#__codelineno-18-24"></a>   [Docker Hub]
+</code></pre></div><p></p>
+<h3 id="4-deploy-manual-ou-automatico">4. Deploy (Manual ou Automático)</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>Docker Hub → kubectl apply → Kubernetes Cluster
+</code></pre></div>
+<hr>
+<h2 id="jobs-configurados">Jobs Configurados</h2>
+<h3 id="resumo-de-todos-os-jobs">Resumo de Todos os Jobs</h3>
+<table>
+<thead>
+<tr>
+<th>Job Name</th>
+<th>Tipo</th>
+<th>Dependências</th>
+<th>Docker Image</th>
+<th>Plataformas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>account</td>
+<td>Library</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>accountservice</td>
+<td>Service</td>
+<td>account</td>
+<td>deenaelorra/accountservice</td>
+<td>amd64, arm64</td>
+</tr>
+<tr>
+<td>auth</td>
+<td>Library</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>auth-service</td>
+<td>Service</td>
+<td>account, auth</td>
+<td>deenaelorra/auth-service</td>
+<td>amd64, arm64</td>
+</tr>
+<tr>
+<td>product</td>
+<td>Library</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>product-service</td>
+<td>Service</td>
+<td>product</td>
+<td>deenaelorra/product</td>
+<td>amd64, arm64</td>
+</tr>
+<tr>
+<td>order</td>
+<td>Library</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>order-service</td>
+<td>Service</td>
+<td>product, order</td>
+<td>deenaelorra/order</td>
+<td>amd64, arm64</td>
+</tr>
+<tr>
+<td>gateway</td>
+<td>Service</td>
+<td>-</td>
+<td>deenaelorra/gateway</td>
+<td>amd64, arm64</td>
+</tr>
+<tr>
+<td>exchange</td>
+<td>Service</td>
+<td>-</td>
+<td>deenaelorra/exchange</td>
+<td>amd64, arm64</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="configuracao-de-seguranca">Configuração de Segurança</h2>
+<h3 id="autenticacao-e-autorizacao">Autenticação e Autorização</h3>
+<p><strong>Arquivo:</strong> <code>jenkins/config/jenkins/config.xml</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nt">&lt;authorizationStrategy</span><span class="w"> </span><span class="na">class=</span><span class="s">"hudson.security.FullControlOnceLoggedInAuthorizationStrategy"</span><span class="nt">&gt;</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">  </span><span class="nt">&lt;denyAnonymousReadAccess&gt;</span>true<span class="nt">&lt;/denyAnonymousReadAccess&gt;</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="nt">&lt;/authorizationStrategy&gt;</span>
+</code></pre></div>
+<p><strong>Características:</strong>
+- Acesso anônimo negado
+- Usuários autenticados têm controle total
+- CSRF protection habilitado</p>
+<h3 id="credenciais-criptografadas">Credenciais Criptografadas</h3>
+<p><strong>Arquivo:</strong> <code>jenkins/config/jenkins/credentials.xml</code></p>
+<p>As credenciais são armazenadas com criptografia AES:
+- Username: plain text
+- Password: criptografado com secret key do Jenkins
+- Secret key: armazenado em <code>jenkins/config/jenkins/secrets/</code></p>
+<hr>
+<h2 id="comandos-uteis">Comandos Úteis</h2>
+<h3 id="gerenciar-jenkins-container">Gerenciar Jenkins Container</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="c1"># Iniciar Jenkins</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="nb">cd</span><span class="w"> </span>jenkins
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="c1"># Ver logs</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>docker<span class="w"> </span>compose<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>jenkins
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="c1"># Parar Jenkins</span>
+<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>docker<span class="w"> </span>compose<span class="w"> </span>down
+<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>
+<a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a><span class="c1"># Rebuild completo</span>
+<a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>--build<span class="w"> </span>--force-recreate
+<a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>
+<a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a><span class="c1"># Entrar no container</span>
+<a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>jenkins<span class="w"> </span>bash
+</code></pre></div>
+<h3 id="gerenciar-builds">Gerenciar Builds</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="c1"># Trigger manual de build (via CLI)</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>java<span class="w"> </span>-jar<span class="w"> </span>jenkins-cli.jar<span class="w"> </span>-s<span class="w"> </span>http://localhost:9080/<span class="w"> </span>build<span class="w"> </span>product-service
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="c1"># Ver status do último build</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>java<span class="w"> </span>-jar<span class="w"> </span>jenkins-cli.jar<span class="w"> </span>-s<span class="w"> </span>http://localhost:9080/<span class="w"> </span>get-job<span class="w"> </span>product-service
+</code></pre></div>
+<h3 id="docker-hub">Docker Hub</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="c1"># Pull de uma imagem</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>docker<span class="w"> </span>pull<span class="w"> </span>deenaelorra/product:latest
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="c1"># Ver tags disponíveis</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>curl<span class="w"> </span>-L<span class="w"> </span>-s<span class="w"> </span><span class="s1">'https://registry.hub.docker.com/v2/repositories/deenaelorra/product/tags?page_size=100'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>-r<span class="w"> </span><span class="s1">'.results[].name'</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="c1"># Run local</span>
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">8080</span>:8080<span class="w"> </span>deenaelorra/product:latest
+</code></pre></div>
+<hr>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="problema-build-falha-por-falta-de-dependencia">Problema: Build falha por falta de dependência</h3>
+<p><strong>Solução:</strong> Certifique-se de que os jobs das libraries foram executados primeiro:
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="c1"># Ordem correta:</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="m">1</span>.<span class="w"> </span>account<span class="w"> </span>→<span class="w"> </span>accountservice
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="m">2</span>.<span class="w"> </span>auth<span class="w"> </span>→<span class="w"> </span>auth-service
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="m">3</span>.<span class="w"> </span>product<span class="w"> </span>→<span class="w"> </span>product-service
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="m">4</span>.<span class="w"> </span>product<span class="w"> </span>+<span class="w"> </span>order<span class="w"> </span>→<span class="w"> </span>order-service
+</code></pre></div><p></p>
+<h3 id="problema-docker-hub-push-falha">Problema: Docker Hub push falha</h3>
+<p><strong>Solução:</strong> Verifique as credenciais:
+1. Jenkins → Manage Jenkins → Credentials
+2. Verifique se <code>dockerhub-credential</code> existe
+3. Teste login manual: <code>docker login -u deenaelorra</code></p>
+<h3 id="problema-multi-platform-build-falha">Problema: Multi-platform build falha</h3>
+<p><strong>Solução:</strong> Verifique se buildx está instalado:
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>jenkins<span class="w"> </span>bash
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>docker<span class="w"> </span>buildx<span class="w"> </span>version
+</code></pre></div><p></p>
+<h3 id="problema-permissao-negada-ao-acessar-docker">Problema: Permissão negada ao acessar Docker</h3>
+<p><strong>Solução:</strong> Verifique se Jenkins está no grupo docker:
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>jenkins<span class="w"> </span>bash
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>groups<span class="w"> </span>jenkins<span class="w">  </span><span class="c1"># deve incluir 'docker'</span>
+</code></pre></div><p></p>
+<hr>
+<h2 id="melhorias-futuras">Melhorias Futuras</h2>
+<ol>
+<li><strong>Testes Automatizados</strong>: Adicionar stage de testes (<code>mvn test</code>)</li>
+<li><strong>SonarQube</strong>: Integração para análise de código</li>
+<li><strong>Notificações</strong>: Slack/Email para builds falhados</li>
+<li><strong>Deploy Automático</strong>: kubectl apply após push bem-sucedido</li>
+<li><strong>Rollback</strong>: Pipeline de rollback para versões anteriores</li>
+<li><strong>Cache de Dependências</strong>: Melhorar performance com cache Maven</li>
+</ol>
+<hr>
+<h2 id="tecnologias-utilizadas">Tecnologias Utilizadas</h2>
+<ul>
+<li><strong>Jenkins 2.533</strong> - Servidor CI/CD</li>
+<li><strong>JDK 21</strong> - Ambiente Java</li>
+<li><strong>Maven</strong> - Build tool para Java</li>
+<li><strong>Docker CE</strong> - Containerização</li>
+<li><strong>Docker Buildx</strong> - Builds multi-plataforma</li>
+<li><strong>kubectl v1.30</strong> - Deploy Kubernetes</li>
+<li><strong>Git</strong> - Controle de versão</li>
+<li><strong>Docker Hub</strong> - Registry de imagens</li>
+</ul>
+<hr>
+<h2 id="repositorios">Repositórios</h2>
+<table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Descrição</th>
+<th>Link do Repositório</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Jenkins Config</strong></td>
+<td>Configurações e pipelines do Jenkins</td>
+<td>[Link do repositório]</td>
+</tr>
+<tr>
+<td><strong>Docker Hub</strong></td>
+<td>Registry com todas as imagens</td>
+<td>https://hub.docker.com/u/deenaelorra</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="licenca">Licença</h2>
+<p>[Adicione informações sobre a licença do projeto]</p>
+<hr>
+<h2 id="contato">Contato</h2>
+<p>[Adicione informações de contato ou contribuição]</p>
 
 
 
@@ -573,7 +2562,7 @@
     <span class="md-icon" title="Última atualização">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="31 de outubro de 2025 14:58:31 UTC">31 de outubro de 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2 de novembro de 2025 15:24:38 UTC">2 de novembro de 2025</span>
   </span>
 
     

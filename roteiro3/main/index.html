@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
     
     
       
@@ -91,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#roteiro-3" class="md-skip">
+        <a href="#order-api-documentacao" class="md-skip">
           Ir para o conteúdo
         </a>
       
@@ -420,6 +420,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Roteiro 3
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -431,6 +444,619 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#visao-geral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visão Geral
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endpoints-principais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoints Principais
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Endpoints Principais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-criar-pedido" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Criar Pedido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-listar-todos-os-pedidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Listar Todos os Pedidos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-buscar-pedido-por-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Buscar Pedido por ID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-deletar-pedido" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Deletar Pedido
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testes-com-postman" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testes com Postman
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testes com Postman">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criar-pedido" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criar Pedido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listar-pedidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listar Pedidos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buscar-pedido-por-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      Buscar Pedido por ID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deletar-pedido" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deletar Pedido
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estrutura-do-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estrutura do Projeto
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estrutura do Projeto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#order-api-feignclient" class="md-nav__link">
+    <span class="md-ellipsis">
+      Order API (FeignClient)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#order-service-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Order Service API
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repositorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repositórios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnologias-utilizadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tecnologias Utilizadas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tecnologias Utilizadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#order-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Order API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#order-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Order Service
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracao-e-execucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuração e Execução
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuração e Execução">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pré-requisitos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variaveis-de-ambiente-order-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variáveis de Ambiente (Order Service)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executar-order-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executar Order Service
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema-do-banco-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schema do Banco de Dados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schema do Banco de Dados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schema-orders" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schema: orders
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabela-orders" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela: orders
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabela-order_item" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela: order_item
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arquitetura" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arquitetura
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Arquitetura">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#camadas-da-aplicacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Camadas da Aplicação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parserconverter-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parser/Converter Layer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comunicacao-entre-microservicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comunicação entre Microserviços
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-tenancy-baseado-em-headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi-Tenancy baseado em Headers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multi-Tenancy baseado em Headers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#isolamento-de-dados-por-conta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Isolamento de Dados por Conta
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integracoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integrações
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integrações">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#product-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Product Service
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calculo-automatico-de-valores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cálculo Automático de Valores
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cálculo Automático de Valores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#subtotal-do-item" class="md-nav__link">
+    <span class="md-ellipsis">
+      Subtotal do Item
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#total-do-pedido" class="md-nav__link">
+    <span class="md-ellipsis">
+      Total do Pedido
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repositorios-personalizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repositórios Personalizados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Repositórios Personalizados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#orderrepository" class="md-nav__link">
+    <span class="md-ellipsis">
+      OrderRepository
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orderitemrepository" class="md-nav__link">
+    <span class="md-ellipsis">
+      OrderItemRepository
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validacoes-e-tratamento-de-erros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validações e Tratamento de Erros
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Validações e Tratamento de Erros">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#validacoes-implementadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validações Implementadas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tratamento-de-erros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tratamento de Erros
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemplos-de-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemplos de Uso
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemplos de Uso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criar-pedido-completo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criar Pedido Completo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logging
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dockerfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dockerfile
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursos-avancados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recursos Avançados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recursos Avançados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-transacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Transações
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-uuid-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. UUID Generation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-cascade-delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Cascade Delete
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-timestamp-automatico" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Timestamp Automático
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#executar-testes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executar Testes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#licenca" class="md-nav__link">
+    <span class="md-ellipsis">
+      Licença
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contato" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contato
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -532,6 +1158,608 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#visao-geral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visão Geral
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endpoints-principais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoints Principais
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Endpoints Principais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-criar-pedido" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Criar Pedido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-listar-todos-os-pedidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Listar Todos os Pedidos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-buscar-pedido-por-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Buscar Pedido por ID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-deletar-pedido" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Deletar Pedido
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testes-com-postman" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testes com Postman
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testes com Postman">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criar-pedido" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criar Pedido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listar-pedidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listar Pedidos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buscar-pedido-por-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      Buscar Pedido por ID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deletar-pedido" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deletar Pedido
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estrutura-do-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estrutura do Projeto
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estrutura do Projeto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#order-api-feignclient" class="md-nav__link">
+    <span class="md-ellipsis">
+      Order API (FeignClient)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#order-service-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Order Service API
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repositorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repositórios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnologias-utilizadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tecnologias Utilizadas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tecnologias Utilizadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#order-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Order API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#order-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Order Service
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracao-e-execucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuração e Execução
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuração e Execução">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pré-requisitos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variaveis-de-ambiente-order-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variáveis de Ambiente (Order Service)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executar-order-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executar Order Service
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema-do-banco-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schema do Banco de Dados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schema do Banco de Dados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schema-orders" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schema: orders
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabela-orders" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela: orders
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabela-order_item" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela: order_item
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arquitetura" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arquitetura
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Arquitetura">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#camadas-da-aplicacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Camadas da Aplicação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parserconverter-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parser/Converter Layer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comunicacao-entre-microservicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comunicação entre Microserviços
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-tenancy-baseado-em-headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi-Tenancy baseado em Headers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multi-Tenancy baseado em Headers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#isolamento-de-dados-por-conta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Isolamento de Dados por Conta
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integracoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integrações
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integrações">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#product-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Product Service
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calculo-automatico-de-valores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cálculo Automático de Valores
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cálculo Automático de Valores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#subtotal-do-item" class="md-nav__link">
+    <span class="md-ellipsis">
+      Subtotal do Item
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#total-do-pedido" class="md-nav__link">
+    <span class="md-ellipsis">
+      Total do Pedido
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repositorios-personalizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repositórios Personalizados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Repositórios Personalizados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#orderrepository" class="md-nav__link">
+    <span class="md-ellipsis">
+      OrderRepository
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orderitemrepository" class="md-nav__link">
+    <span class="md-ellipsis">
+      OrderItemRepository
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validacoes-e-tratamento-de-erros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validações e Tratamento de Erros
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Validações e Tratamento de Erros">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#validacoes-implementadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validações Implementadas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tratamento-de-erros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tratamento de Erros
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemplos-de-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemplos de Uso
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemplos de Uso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criar-pedido-completo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criar Pedido Completo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logging
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dockerfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dockerfile
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursos-avancados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recursos Avançados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recursos Avançados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-transacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Transações
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-uuid-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. UUID Generation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-cascade-delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Cascade Delete
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-timestamp-automatico" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Timestamp Automático
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#executar-testes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executar Testes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#licenca" class="md-nav__link">
+    <span class="md-ellipsis">
+      Licença
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contato" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contato
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -549,8 +1777,579 @@
   
 
 
-<h1 id="roteiro-3">Roteiro 3</h1>
-<p>Conteúdo do Roteiro 3 será adicionado aqui.</p>
+<h1 id="order-api-documentacao">Order API - Documentação</h1>
+<h2 id="visao-geral">Visão Geral</h2>
+<p>A <strong>Order API</strong> é uma API RESTful de CRUD (Create, Read, Update, Delete) desenvolvida em Spring Boot para gerenciamento de pedidos em um sistema de e-commerce. O projeto segue uma arquitetura de microserviços, onde o <strong>Order</strong> atua como um FeignClient que comunica com o <strong>Order Service</strong>, responsável pela lógica de negócios e persistência de dados em PostgreSQL. A API permite criar, listar, buscar e deletar pedidos através de endpoints HTTP, integrando-se com o Product Service para enriquecer os itens do pedido com informações de produto em tempo real. O serviço suporta multi-tenancy baseado em headers (id-account), utiliza migrações de banco de dados com Flyway, e implementa relacionamentos cascata entre pedidos e itens.</p>
+<hr>
+<h2 id="endpoints-principais">Endpoints Principais</h2>
+<h3 id="1-criar-pedido">1. Criar Pedido</h3>
+<p><strong>Endpoint:</strong> <code>POST /order</code></p>
+<p><strong>Descrição:</strong> Cria um novo pedido com seus itens. Automaticamente busca informações dos produtos e calcula totais.</p>
+<p><strong>Headers Obrigatórios:</strong>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>id-account: {account_id}
+</code></pre></div><p></p>
+<p><strong>Request Body:</strong>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">      </span><span class="nt">"idProduct"</span><span class="p">:</span><span class="w"> </span><span class="s2">"550e8400-e29b-41d4-a716-446655440000"</span><span class="p">,</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">      </span><span class="nt">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">      </span><span class="nt">"idProduct"</span><span class="p">:</span><span class="w"> </span><span class="s2">"660e8400-e29b-41d4-a716-446655440001"</span><span class="p">,</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">      </span><span class="nt">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">  </span><span class="p">]</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="p">}</span>
+</code></pre></div><p></p>
+<p><strong>Response (201 Created):</strong>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"770e8400-e29b-41d4-a716-446655440002"</span><span class="p">,</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">"idAccount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123e4567-e89b-12d3-a456-426614174000"</span><span class="p">,</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nt">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-10-31T14:30:45"</span><span class="p">,</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="nt">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"880e8400-e29b-41d4-a716-446655440003"</span><span class="p">,</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">      </span><span class="nt">"product"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"550e8400-e29b-41d4-a716-446655440000"</span><span class="p">,</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Arroz Integral"</span><span class="p">,</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">        </span><span class="nt">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">12.50</span><span class="p">,</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">        </span><span class="nt">"unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kg"</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">      </span><span class="p">},</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">      </span><span class="nt">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">      </span><span class="nt">"subtotal"</span><span class="p">:</span><span class="w"> </span><span class="mf">25.00</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"990e8400-e29b-41d4-a716-446655440004"</span><span class="p">,</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">      </span><span class="nt">"product"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"660e8400-e29b-41d4-a716-446655440001"</span><span class="p">,</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Feijão Preto"</span><span class="p">,</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">        </span><span class="nt">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">8.90</span><span class="p">,</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="w">        </span><span class="nt">"unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kg"</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="w">      </span><span class="p">},</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="w">      </span><span class="nt">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="w">      </span><span class="nt">"subtotal"</span><span class="p">:</span><span class="w"> </span><span class="mf">44.50</span>
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="w">  </span><span class="p">],</span>
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="w">  </span><span class="nt">"total"</span><span class="p">:</span><span class="w"> </span><span class="mf">69.50</span>
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="p">}</span>
+</code></pre></div><p></p>
+<hr>
+<h3 id="2-listar-todos-os-pedidos">2. Listar Todos os Pedidos</h3>
+<p><strong>Endpoint:</strong> <code>GET /order</code></p>
+<p><strong>Descrição:</strong> Retorna todos os pedidos da conta autenticada.</p>
+<p><strong>Headers Obrigatórios:</strong>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>id-account: {account_id}
+</code></pre></div><p></p>
+<p><strong>Response (200 OK):</strong>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">[</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="p">{</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"770e8400-e29b-41d4-a716-446655440002"</span><span class="p">,</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="nt">"idAccount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123e4567-e89b-12d3-a456-426614174000"</span><span class="p">,</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="nt">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-10-31T14:30:45"</span><span class="p">,</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="nt">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">      </span><span class="p">{</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"880e8400-e29b-41d4-a716-446655440003"</span><span class="p">,</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">        </span><span class="nt">"product"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">          </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"550e8400-e29b-41d4-a716-446655440000"</span><span class="p">,</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">          </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Arroz Integral"</span><span class="p">,</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">          </span><span class="nt">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">12.50</span><span class="p">,</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">          </span><span class="nt">"unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kg"</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">        </span><span class="nt">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">        </span><span class="nt">"subtotal"</span><span class="p">:</span><span class="w"> </span><span class="mf">25.00</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">    </span><span class="p">],</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">    </span><span class="nt">"total"</span><span class="p">:</span><span class="w"> </span><span class="mf">25.00</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="p">]</span>
+</code></pre></div><p></p>
+<hr>
+<h3 id="3-buscar-pedido-por-id">3. Buscar Pedido por ID</h3>
+<p><strong>Endpoint:</strong> <code>GET /order/{id}</code></p>
+<p><strong>Descrição:</strong> Retorna os detalhes de um pedido específico.</p>
+<p><strong>Headers Obrigatórios:</strong>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>id-account: {account_id}
+</code></pre></div><p></p>
+<p><strong>Exemplo:</strong> <code>GET /order/770e8400-e29b-41d4-a716-446655440002</code></p>
+<p><strong>Response (200 OK):</strong>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">{</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"770e8400-e29b-41d4-a716-446655440002"</span><span class="p">,</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span><span class="nt">"idAccount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123e4567-e89b-12d3-a456-426614174000"</span><span class="p">,</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">  </span><span class="nt">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-10-31T14:30:45"</span><span class="p">,</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">  </span><span class="nt">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"880e8400-e29b-41d4-a716-446655440003"</span><span class="p">,</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">      </span><span class="nt">"product"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"550e8400-e29b-41d4-a716-446655440000"</span><span class="p">,</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Arroz Integral"</span><span class="p">,</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">        </span><span class="nt">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">12.50</span><span class="p">,</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">        </span><span class="nt">"unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kg"</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">      </span><span class="p">},</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">      </span><span class="nt">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">      </span><span class="nt">"subtotal"</span><span class="p">:</span><span class="w"> </span><span class="mf">25.00</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="w">  </span><span class="p">],</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="w">  </span><span class="nt">"total"</span><span class="p">:</span><span class="w"> </span><span class="mf">25.00</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="p">}</span>
+</code></pre></div><p></p>
+<p><strong>Códigos de Status:</strong>
+- <code>200 OK</code>: Pedido encontrado
+- <code>404 Not Found</code>: Pedido não encontrado ou não pertence à conta</p>
+<hr>
+<h3 id="4-deletar-pedido">4. Deletar Pedido</h3>
+<p><strong>Endpoint:</strong> <code>DELETE /order/{id}</code></p>
+<p><strong>Descrição:</strong> Remove um pedido e todos os seus itens (cascade delete).</p>
+<p><strong>Headers Obrigatórios:</strong>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>id-account: {account_id}
+</code></pre></div><p></p>
+<p><strong>Exemplo:</strong> <code>DELETE /order/770e8400-e29b-41d4-a716-446655440002</code></p>
+<p><strong>Response (204 No Content)</strong></p>
+<p><strong>Códigos de Status:</strong>
+- <code>204 No Content</code>: Pedido deletado com sucesso
+- <code>404 Not Found</code>: Pedido não encontrado ou não pertence à conta</p>
+<hr>
+<h2 id="testes-com-postman">Testes com Postman</h2>
+<h3 id="criar-pedido">Criar Pedido</h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="./docs/postman-create-order.png" data-desc-position="bottom"><img alt="POST /order" src="./docs/postman-create-order.png"></a></p>
+<h3 id="listar-pedidos">Listar Pedidos</h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="./docs/postman-list-orders.png" data-desc-position="bottom"><img alt="GET /order" src="./docs/postman-list-orders.png"></a></p>
+<h3 id="buscar-pedido-por-id">Buscar Pedido por ID</h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="./docs/postman-get-order.png" data-desc-position="bottom"><img alt="GET /order/{id}" src="./docs/postman-get-order.png"></a></p>
+<h3 id="deletar-pedido">Deletar Pedido</h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="./docs/postman-delete-order.png" data-desc-position="bottom"><img alt="DELETE /order/{id}" src="./docs/postman-delete-order.png"></a></p>
+<hr>
+<h2 id="estrutura-do-projeto">Estrutura do Projeto</h2>
+<h3 id="order-api-feignclient">Order API (FeignClient)</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>📁 api/
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>└── 📁 order/
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    ├── 📁 src/
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    │   └── 📁 main/
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    │       └── 📁 java/
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    │           └── 📁 store/
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    │               └── 📁 order/
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>    │                   ├── 📄 OrderController.java
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>    │                   ├── 📄 OrderIn.java
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>    │                   ├── 📄 OrderOut.java
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>    │                   ├── 📄 OrderItemIn.java
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>    │                   └── 📄 OrderItemOut.java
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>    ├── 📄 pom.xml
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>    └── 📄 README.md
+</code></pre></div>
+<h3 id="order-service-api">Order Service API</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>📁 api/
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>└── 📁 order_service/
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    ├── 📁 src/
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    │   ├── 📁 main/
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    │   │   ├── 📁 java/
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    │   │   │   └── 📁 store/
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>    │   │   │       └── 📁 order/
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>    │   │   │           ├── 📄 OrderApplication.java
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>    │   │   │           ├── 📄 OrderResource.java
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>    │   │   │           ├── 📄 OrderService.java
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>    │   │   │           ├── 📄 OrderParser.java
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>    │   │   │           ├── 📄 Order.java
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>    │   │   │           ├── 📄 OrderItem.java
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>    │   │   │           ├── 📄 OrderModel.java
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>    │   │   │           ├── 📄 OrderItemModel.java
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>    │   │   │           ├── 📄 OrderRepository.java
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>    │   │   │           └── 📄 OrderItemRepository.java
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>    │   │   └── 📁 resources/
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>    │   │       ├── 📄 application.yaml
+<a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>    │   │       └── 📁 db/
+<a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a>    │   │           └── 📁 migration/
+<a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a>    │   │               ├── 📄 V2025.10.27.001__create_schema.sql
+<a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a>    │   │               ├── 📄 V2025.10.27.002__create_table_order.sql
+<a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a>    │   │               └── 📄 V2025.10.27.003__create_table_order_item.sql
+<a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a>    │   └── 📁 test/
+<a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a>    │       └── 📁 java/
+<a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a>    │           └── 📁 store/
+<a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a>    │               └── 📁 order/
+<a id="__codelineno-9-29" name="__codelineno-9-29" href="#__codelineno-9-29"></a>    ├── 📄 Dockerfile
+<a id="__codelineno-9-30" name="__codelineno-9-30" href="#__codelineno-9-30"></a>    └── 📄 pom.xml
+</code></pre></div>
+<hr>
+<h2 id="repositorios">Repositórios</h2>
+<table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Descrição</th>
+<th>Link do Repositório</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Order API</strong></td>
+<td>FeignClient para comunicação entre microserviços</td>
+<td>[Link do repositório]</td>
+</tr>
+<tr>
+<td><strong>Order Service</strong></td>
+<td>Serviço principal com lógica de negócios e persistência</td>
+<td>[Link do repositório]</td>
+</tr>
+<tr>
+<td><strong>Product API</strong></td>
+<td>Integração para buscar informações de produtos</td>
+<td>[Link do repositório]</td>
+</tr>
+<tr>
+<td><strong>Gateway</strong></td>
+<td>API Gateway para roteamento de requisições</td>
+<td>[Link do repositório]</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="tecnologias-utilizadas">Tecnologias Utilizadas</h2>
+<h3 id="order-api">Order API</h3>
+<ul>
+<li>Spring Boot 3.5.5</li>
+<li>Java 21</li>
+<li>Spring Cloud OpenFeign 2025.0.0</li>
+<li>Lombok</li>
+<li>Product API (dependência)</li>
+</ul>
+<h3 id="order-service">Order Service</h3>
+<ul>
+<li>Spring Boot 3.5.5</li>
+<li>Java 21</li>
+<li>Spring Data JPA</li>
+<li>PostgreSQL 17.6</li>
+<li>Flyway (Database Migration)</li>
+<li>Spring Cloud OpenFeign</li>
+<li>Lombok</li>
+<li>Order API (dependência)</li>
+<li>Product API (dependência)</li>
+</ul>
+<hr>
+<h2 id="configuracao-e-execucao">Configuração e Execução</h2>
+<h3 id="pre-requisitos">Pré-requisitos</h3>
+<ul>
+<li>Java 21+</li>
+<li>Maven 3.8+</li>
+<li>PostgreSQL 17.6+</li>
+<li>Product Service rodando (dependência externa)</li>
+</ul>
+<h3 id="variaveis-de-ambiente-order-service">Variáveis de Ambiente (Order Service)</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nv">DATABASE_URL</span><span class="o">=</span>jdbc:postgresql://localhost:5432/store
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nv">DATABASE_USERNAME</span><span class="o">=</span>store
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="nv">DATABASE_PASSWORD</span><span class="o">=</span>store
+</code></pre></div>
+<h3 id="executar-order-service">Executar Order Service</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nb">cd</span><span class="w"> </span>api/order_service
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>mvn<span class="w"> </span>clean<span class="w"> </span>install
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>mvn<span class="w"> </span>spring-boot:run
+</code></pre></div>
+<p>A aplicação estará disponível em: <code>http://localhost:8080</code></p>
+<hr>
+<h2 id="schema-do-banco-de-dados">Schema do Banco de Dados</h2>
+<h3 id="schema-orders">Schema: <code>orders</code></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">SCHEMA</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">orders</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="tabela-orders">Tabela: <code>orders</code></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">orders</span><span class="p">.</span><span class="n">orders</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="n">id_order</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">36</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="n">id_account</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">36</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">    </span><span class="n">dt_created_at</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">    </span><span class="n">vl_total</span><span class="w"> </span><span class="n">DOUBLE</span><span class="w"> </span><span class="k">PRECISION</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">    </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">pk_order</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id_order</span><span class="p">)</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="p">);</span>
+</code></pre></div>
+<p><strong>Campos:</strong>
+- <code>id_order</code>: UUID do pedido (chave primária)
+- <code>id_account</code>: UUID da conta do usuário
+- <code>dt_created_at</code>: Data e hora de criação do pedido
+- <code>vl_total</code>: Valor total do pedido</p>
+<h3 id="tabela-order_item">Tabela: <code>order_item</code></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">orders</span><span class="p">.</span><span class="n">order_item</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="n">id_order_item</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">36</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">    </span><span class="n">id_order</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">36</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">    </span><span class="n">id_product</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">36</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">    </span><span class="n">qt_quantity</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">    </span><span class="n">vl_price</span><span class="w"> </span><span class="n">DOUBLE</span><span class="w"> </span><span class="k">PRECISION</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">    </span><span class="n">vl_subtotal</span><span class="w"> </span><span class="n">DOUBLE</span><span class="w"> </span><span class="k">PRECISION</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="w">    </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">pk_order_item</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id_order_item</span><span class="p">),</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="w">    </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_order_item_order</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id_order</span><span class="p">)</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="w">        </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">orders</span><span class="p">.</span><span class="n">orders</span><span class="p">(</span><span class="n">id_order</span><span class="p">)</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">CASCADE</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="p">);</span>
+</code></pre></div>
+<p><strong>Campos:</strong>
+- <code>id_order_item</code>: UUID do item (chave primária)
+- <code>id_order</code>: UUID do pedido (chave estrangeira)
+- <code>id_product</code>: UUID do produto (referência ao Product Service)
+- <code>qt_quantity</code>: Quantidade do item
+- <code>vl_price</code>: Preço unitário no momento da compra
+- <code>vl_subtotal</code>: Subtotal do item (quantidade × preço)</p>
+<p><strong>Características:</strong>
+- <strong>CASCADE DELETE</strong>: Ao deletar um pedido, todos os itens são deletados automaticamente
+- <strong>Relacionamento 1:N</strong>: Um pedido pode ter múltiplos itens</p>
+<hr>
+<h2 id="arquitetura">Arquitetura</h2>
+<h3 id="camadas-da-aplicacao">Camadas da Aplicação</h3>
+<ol>
+<li><strong>Controller Layer</strong> - <code>OrderResource</code>: Gerencia requisições HTTP</li>
+<li><strong>Service Layer</strong> - <code>OrderService</code>: Contém a lógica de negócios</li>
+<li><strong>Repository Layer</strong> - <code>OrderRepository</code>, <code>OrderItemRepository</code>: Acesso aos dados</li>
+<li><strong>DTO Layer</strong> - <code>OrderIn/OrderOut</code>, <code>OrderItemIn/OrderItemOut</code>: Contratos da API</li>
+<li><strong>Domain Model</strong> - <code>Order</code>, <code>OrderItem</code>: Representa as entidades de negócio</li>
+<li><strong>Entity Model</strong> - <code>OrderModel</code>, <code>OrderItemModel</code>: Representa as entidades do banco</li>
+</ol>
+<h3 id="parserconverter-layer">Parser/Converter Layer</h3>
+<p><strong>OrderParser</strong> - Responsável por:
+- Converter <code>OrderIn</code> → <code>Order</code> (domain)
+- Converter <code>Order</code> → <code>OrderOut</code> (response)
+- Enriquecer items com dados do Product Service
+- Calcular subtotais e totais</p>
+<h3 id="comunicacao-entre-microservicos">Comunicação entre Microserviços</h3>
+<p>O <strong>Order Service</strong> integra-se com o <strong>Product Service</strong> para enriquecer os pedidos:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nd">@FeignClient</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"product"</span><span class="p">,</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"http://product-service:80"</span><span class="p">)</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">ProductController</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="nd">@GetMapping</span><span class="p">(</span><span class="s">"/product/{id}"</span><span class="p">)</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">    </span><span class="n">ResponseEntity</span><span class="o">&lt;</span><span class="n">ProductOut</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">findProduct</span><span class="p">(</span><span class="nd">@PathVariable</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">id</span><span class="p">);</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="p">}</span>
+</code></pre></div>
+<p><strong>Fluxo de Enriquecimento:</strong>
+1. Cliente envia <code>OrderIn</code> com apenas <code>idProduct</code> e <code>quantity</code>
+2. Order Service chama Product Service para cada produto
+3. Obtém <code>ProductOut</code> completo (nome, preço, unidade)
+4. Calcula subtotal: <code>quantity × product.price</code>
+5. Calcula total do pedido: soma de todos os subtotais
+6. Persiste no banco de dados
+7. Retorna <code>OrderOut</code> enriquecido</p>
+<hr>
+<h2 id="multi-tenancy-baseado-em-headers">Multi-Tenancy baseado em Headers</h2>
+<h3 id="isolamento-de-dados-por-conta">Isolamento de Dados por Conta</h3>
+<p>Todos os endpoints requerem o header <code>id-account</code> para garantir isolamento de dados:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nd">@GetMapping</span><span class="p">(</span><span class="s">"/order"</span><span class="p">)</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="kd">public</span><span class="w"> </span><span class="n">ResponseEntity</span><span class="o">&lt;</span><span class="n">List</span><span class="o">&lt;</span><span class="n">OrderOut</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="nf">findAll</span><span class="p">(</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">    </span><span class="nd">@RequestHeader</span><span class="p">(</span><span class="s">"id-account"</span><span class="p">)</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">idAccount</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">    </span><span class="c1">// Retorna apenas pedidos da conta especificada</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="p">}</span>
+</code></pre></div>
+<p><strong>Segurança:</strong>
+- Cada conta só pode ver seus próprios pedidos
+- Validação do <code>id-account</code> em todas as operações
+- Operações de busca e delete verificam propriedade</p>
+<hr>
+<h2 id="integracoes">Integrações</h2>
+<h3 id="product-service">Product Service</h3>
+<p><strong>URL:</strong> <code>http://product-service:80</code></p>
+<p><strong>Endpoint Utilizado:</strong>
+- <code>GET /product/{id}</code> - Buscar informações de um produto</p>
+<p><strong>Momento da Integração:</strong>
+- <strong>Criação de pedido</strong>: Busca produto para cada item
+- <strong>Listagem de pedidos</strong>: Busca produto para cada item (re-enriquecimento)
+- <strong>Busca de pedido por ID</strong>: Busca produto para cada item</p>
+<p><strong>Dados Obtidos:</strong>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="p">{</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">  </span><span class="nt">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"double"</span><span class="p">,</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="w">  </span><span class="nt">"unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="p">}</span>
+</code></pre></div><p></p>
+<p><strong>Tratamento de Erros:</strong>
+- Se o produto não existir, o item não é adicionado ao pedido
+- Logs de erro são registrados</p>
+<hr>
+<h2 id="calculo-automatico-de-valores">Cálculo Automático de Valores</h2>
+<h3 id="subtotal-do-item">Subtotal do Item</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">subtotal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">quantity</span><span class="w"> </span><span class="err">×</span><span class="w"> </span><span class="n">product</span><span class="p">.</span><span class="na">price</span>
+</code></pre></div>
+<p><strong>Exemplo:</strong>
+- Quantidade: 5
+- Preço unitário: R$ 8.90
+- Subtotal: 5 × 8.90 = <strong>R$ 44.50</strong></p>
+<h3 id="total-do-pedido">Total do Pedido</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Σ</span><span class="p">(</span><span class="n">subtotal</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">todos</span><span class="w"> </span><span class="n">os</span><span class="w"> </span><span class="n">itens</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>Exemplo:</strong>
+- Item 1: R$ 25.00
+- Item 2: R$ 44.50
+- Total: 25.00 + 44.50 = <strong>R$ 69.50</strong></p>
+<hr>
+<h2 id="repositorios-personalizados">Repositórios Personalizados</h2>
+<h3 id="orderrepository">OrderRepository</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">OrderRepository</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">CrudRepository</span><span class="o">&lt;</span><span class="n">OrderModel</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">    </span><span class="n">List</span><span class="o">&lt;</span><span class="n">OrderModel</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">findByIdAccount</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">idAccount</span><span class="p">);</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">    </span><span class="n">Optional</span><span class="o">&lt;</span><span class="n">OrderModel</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">findByIdAndIdAccount</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">idAccount</span><span class="p">);</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="p">}</span>
+</code></pre></div>
+<p><strong>Métodos:</strong>
+- <code>findByIdAccount</code>: Lista todos os pedidos de uma conta
+- <code>findByIdAndIdAccount</code>: Busca pedido validando propriedade</p>
+<h3 id="orderitemrepository">OrderItemRepository</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">OrderItemRepository</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">CrudRepository</span><span class="o">&lt;</span><span class="n">OrderItemModel</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">    </span><span class="n">List</span><span class="o">&lt;</span><span class="n">OrderItemModel</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">findByIdOrder</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">idOrder</span><span class="p">);</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">deleteByIdOrder</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">idOrder</span><span class="p">);</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="p">}</span>
+</code></pre></div>
+<p><strong>Métodos:</strong>
+- <code>findByIdOrder</code>: Lista todos os itens de um pedido
+- <code>deleteByIdOrder</code>: Deleta todos os itens de um pedido</p>
+<hr>
+<h2 id="validacoes-e-tratamento-de-erros">Validações e Tratamento de Erros</h2>
+<h3 id="validacoes-implementadas">Validações Implementadas</h3>
+<ol>
+<li><strong>Account ID obrigatório</strong>: Header <code>id-account</code> deve estar presente</li>
+<li><strong>Produto existe</strong>: Valida se o produto existe no Product Service</li>
+<li><strong>Quantidade válida</strong>: Quantidade deve ser maior que zero</li>
+<li><strong>Propriedade do pedido</strong>: Valida se o pedido pertence à conta</li>
+</ol>
+<h3 id="tratamento-de-erros">Tratamento de Erros</h3>
+<table>
+<thead>
+<tr>
+<th>Erro</th>
+<th>Status Code</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pedido não encontrado</td>
+<td>404</td>
+<td>ID do pedido inválido ou não pertence à conta</td>
+</tr>
+<tr>
+<td>Produto não encontrado</td>
+<td>400/404</td>
+<td>Produto referenciado não existe</td>
+</tr>
+<tr>
+<td>Account ID ausente</td>
+<td>400</td>
+<td>Header <code>id-account</code> não fornecido</td>
+</tr>
+<tr>
+<td>Erro de integração</td>
+<td>500</td>
+<td>Falha ao comunicar com Product Service</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="exemplos-de-uso">Exemplos de Uso</h2>
+<h3 id="criar-pedido-completo">Criar Pedido Completo</h3>
+<p><strong>Request:</strong>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s2">"http://localhost:8080/order"</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">  </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="w">  </span>-H<span class="w"> </span><span class="s2">"id-account: 123e4567-e89b-12d3-a456-426614174000"</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="w">  </span>-d<span class="w"> </span><span class="s1">'{</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="s1">    "items": [</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="s1">      {</span>
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="s1">        "idProduct": "550e8400-e29b-41d4-a716-446655440000",</span>
+<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a><span class="s1">        "quantity": 3</span>
+<a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a><span class="s1">      },</span>
+<a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a><span class="s1">      {</span>
+<a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a><span class="s1">        "idProduct": "660e8400-e29b-41d4-a716-446655440001",</span>
+<a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a><span class="s1">        "quantity": 2</span>
+<a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a><span class="s1">      }</span>
+<a id="__codelineno-22-14" name="__codelineno-22-14" href="#__codelineno-22-14"></a><span class="s1">    ]</span>
+<a id="__codelineno-22-15" name="__codelineno-22-15" href="#__codelineno-22-15"></a><span class="s1">  }'</span>
+</code></pre></div><p></p>
+<p><strong>Response:</strong>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="p">{</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"770e8400-e29b-41d4-a716-446655440002"</span><span class="p">,</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">  </span><span class="nt">"idAccount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123e4567-e89b-12d3-a456-426614174000"</span><span class="p">,</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="w">  </span><span class="nt">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-10-31T14:30:45"</span><span class="p">,</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="w">  </span><span class="nt">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="w">      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"880e8400-e29b-41d4-a716-446655440003"</span><span class="p">,</span>
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a><span class="w">      </span><span class="nt">"product"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a><span class="w">        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"550e8400-e29b-41d4-a716-446655440000"</span><span class="p">,</span>
+<a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a><span class="w">        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Arroz Integral"</span><span class="p">,</span>
+<a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a><span class="w">        </span><span class="nt">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">12.50</span><span class="p">,</span>
+<a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a><span class="w">        </span><span class="nt">"unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kg"</span>
+<a id="__codelineno-23-13" name="__codelineno-23-13" href="#__codelineno-23-13"></a><span class="w">      </span><span class="p">},</span>
+<a id="__codelineno-23-14" name="__codelineno-23-14" href="#__codelineno-23-14"></a><span class="w">      </span><span class="nt">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<a id="__codelineno-23-15" name="__codelineno-23-15" href="#__codelineno-23-15"></a><span class="w">      </span><span class="nt">"subtotal"</span><span class="p">:</span><span class="w"> </span><span class="mf">37.50</span>
+<a id="__codelineno-23-16" name="__codelineno-23-16" href="#__codelineno-23-16"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-23-17" name="__codelineno-23-17" href="#__codelineno-23-17"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-23-18" name="__codelineno-23-18" href="#__codelineno-23-18"></a><span class="w">      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"990e8400-e29b-41d4-a716-446655440004"</span><span class="p">,</span>
+<a id="__codelineno-23-19" name="__codelineno-23-19" href="#__codelineno-23-19"></a><span class="w">      </span><span class="nt">"product"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-23-20" name="__codelineno-23-20" href="#__codelineno-23-20"></a><span class="w">        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"660e8400-e29b-41d4-a716-446655440001"</span><span class="p">,</span>
+<a id="__codelineno-23-21" name="__codelineno-23-21" href="#__codelineno-23-21"></a><span class="w">        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Feijão Preto"</span><span class="p">,</span>
+<a id="__codelineno-23-22" name="__codelineno-23-22" href="#__codelineno-23-22"></a><span class="w">        </span><span class="nt">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">8.90</span><span class="p">,</span>
+<a id="__codelineno-23-23" name="__codelineno-23-23" href="#__codelineno-23-23"></a><span class="w">        </span><span class="nt">"unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kg"</span>
+<a id="__codelineno-23-24" name="__codelineno-23-24" href="#__codelineno-23-24"></a><span class="w">      </span><span class="p">},</span>
+<a id="__codelineno-23-25" name="__codelineno-23-25" href="#__codelineno-23-25"></a><span class="w">      </span><span class="nt">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<a id="__codelineno-23-26" name="__codelineno-23-26" href="#__codelineno-23-26"></a><span class="w">      </span><span class="nt">"subtotal"</span><span class="p">:</span><span class="w"> </span><span class="mf">17.80</span>
+<a id="__codelineno-23-27" name="__codelineno-23-27" href="#__codelineno-23-27"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-23-28" name="__codelineno-23-28" href="#__codelineno-23-28"></a><span class="w">  </span><span class="p">],</span>
+<a id="__codelineno-23-29" name="__codelineno-23-29" href="#__codelineno-23-29"></a><span class="w">  </span><span class="nt">"total"</span><span class="p">:</span><span class="w"> </span><span class="mf">55.30</span>
+<a id="__codelineno-23-30" name="__codelineno-23-30" href="#__codelineno-23-30"></a><span class="p">}</span>
+</code></pre></div><p></p>
+<hr>
+<h2 id="logging">Logging</h2>
+<p>A aplicação utiliza logging em nível DEBUG para o pacote <code>store</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="nt">logging</span><span class="p">:</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="w">  </span><span class="nt">level</span><span class="p">:</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="w">    </span><span class="nt">store</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">debug</span>
+</code></pre></div>
+<p><strong>Eventos logados:</strong>
+- Requisições HTTP recebidas
+- Chamadas ao Product Service
+- Operações de banco de dados
+- Erros e exceções
+- Cálculos de totais</p>
+<hr>
+<h2 id="dockerfile">Dockerfile</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">openjdk:25-slim</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="k">VOLUME</span><span class="w"> </span><span class="s">/tmp</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="k">COPY</span><span class="w"> </span>target/*.jar<span class="w"> </span>/app.jar
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="k">ENTRYPOINT</span><span class="w"> </span><span class="p">[</span><span class="s2">"java"</span><span class="p">,</span><span class="s2">"-jar"</span><span class="p">,</span><span class="s2">"/app.jar"</span><span class="p">]</span>
+</code></pre></div>
+<p><strong>Build e Run:</strong>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="nb">cd</span><span class="w"> </span>api/order_service
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>mvn<span class="w"> </span>clean<span class="w"> </span>package
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>order-service<span class="w"> </span>.
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">8080</span>:8080<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">DATABASE_URL</span><span class="o">=</span>jdbc:postgresql://host:5432/store<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">DATABASE_USERNAME</span><span class="o">=</span>store<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">DATABASE_PASSWORD</span><span class="o">=</span>store<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a><span class="w">  </span>order-service
+</code></pre></div><p></p>
+<hr>
+<h2 id="recursos-avancados">Recursos Avançados</h2>
+<h3 id="1-transacoes">1. Transações</h3>
+<p>Operações de criação e deleção são transacionais:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="nd">@Service</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="nd">@Transactional</span>
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">OrderService</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="w">    </span><span class="c1">// Métodos transacionais</span>
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="2-uuid-generation">2. UUID Generation</h3>
+<p>IDs são gerados automaticamente usando UUID:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="nd">@Id</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="nd">@GeneratedValue</span><span class="p">(</span><span class="n">strategy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GenerationType</span><span class="p">.</span><span class="na">UUID</span><span class="p">)</span>
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="3-cascade-delete">3. Cascade Delete</h3>
+<p>Deleção em cascata de itens ao deletar pedido:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_order_item_order</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id_order</span><span class="p">)</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="w">    </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">orders</span><span class="p">(</span><span class="n">id_order</span><span class="p">)</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">CASCADE</span>
+</code></pre></div>
+<h3 id="4-timestamp-automatico">4. Timestamp Automático</h3>
+<p>Data de criação definida automaticamente:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="kd">private</span><span class="w"> </span><span class="n">LocalDateTime</span><span class="w"> </span><span class="n">createdAt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LocalDateTime</span><span class="p">.</span><span class="na">now</span><span class="p">();</span>
+</code></pre></div>
+<hr>
+<h2 id="testes">Testes</h2>
+<h3 id="executar-testes">Executar Testes</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="nb">cd</span><span class="w"> </span>api/order_service
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>mvn<span class="w"> </span><span class="nb">test</span>
+</code></pre></div>
+<hr>
+<h2 id="licenca">Licença</h2>
+<p>[Adicione informações sobre a licença do projeto]</p>
+<hr>
+<h2 id="contato">Contato</h2>
+<p>[Adicione informações de contato ou contribuição]</p>
 
 
 
@@ -573,7 +2372,7 @@
     <span class="md-icon" title="Última atualização">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="31 de outubro de 2025 14:58:31 UTC">31 de outubro de 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2 de novembro de 2025 15:24:38 UTC">2 de novembro de 2025</span>
   </span>
 
     

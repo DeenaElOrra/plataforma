@@ -1,0 +1,1958 @@
+<!DOCTYPE html><html lang="pt" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Deena Orra">
+      
+      
+        <link rel="canonical" href="https://DeenaElOrra.github.io/plataforma/roteiro%205/main/">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+    
+    
+      
+        <title>Minikube - Kubernetes Local - Plataformas, Microsserviços e APIs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_markdown_exec_pyodide.css">
+    
+      <link rel="stylesheet" href="../../assets/_markdown_exec_ansi.css">
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/badge.css">
+    
+      <link rel="stylesheet" href="../../termynal.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#minikube-kubernetes-local" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Plataformas, Microsserviços e APIs" class="md-header__button md-logo" aria-label="Plataformas, Microsserviços e APIs" data-md-component="logo">
+      
+  <img src="../../assets/images/favicon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Plataformas, Microsserviços e APIs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Minikube - Kubernetes Local
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="indigo" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="grey" data-md-color-accent="indigo" aria-label="Switch to system preference" type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/DeenaElOrra/plataforma" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Plataformas, Microsserviços e APIs" class="md-nav__button md-logo" aria-label="Plataformas, Microsserviços e APIs" data-md-component="logo">
+      
+  <img src="../../assets/images/favicon.png" alt="logo">
+
+    </a>
+    Plataformas, Microsserviços e APIs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/DeenaElOrra/plataforma" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../thisdocumentation/main/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    This documentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Roteiros
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Roteiros
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roteiro1/main/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Roteiro 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roteiro2/main/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Roteiro 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roteiro3/main/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Roteiro 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roteiro4/main/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Roteiro 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notebook1/ex1_data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Notebook 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projeto/main/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Projeto
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pré-Requisitos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pré-Requisitos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instalacao-das-ferramentas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalação das Ferramentas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instalação das Ferramentas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minikube" class="md-nav__link">
+    <span class="md-ellipsis">
+      Minikube
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kubectl" class="md-nav__link">
+    <span class="md-ellipsis">
+      kubectl
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passos-para-iniciar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Passos para Iniciar
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Passos para Iniciar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-iniciar-o-minikube" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Iniciar o Minikube
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-clonar-e-navegar-ate-o-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Clonar e Navegar até o Projeto
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-criar-recursos-de-infraestrutura" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Criar Recursos de Infraestrutura
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Criar Recursos de Infraestrutura">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-criar-configmap-do-postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Criar ConfigMap do PostgreSQL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-criar-secrets-do-postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Criar Secrets do PostgreSQL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-deployar-postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. Deployar PostgreSQL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-deployar-redis" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4. Deployar Redis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-deployar-os-microservicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Deployar os Microserviços
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Deployar os Microserviços">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opcao-1-deploy-individual" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opção 1: Deploy Individual
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opcao-2-deploy-em-lote-recomendado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opção 2: Deploy em Lote (Recomendado)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-verificar-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Verificar Status
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Verificar Status">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-verificar-pods" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1. Verificar Pods
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-verificar-servicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2. Verificar Serviços
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acessando-a-aplicacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acessando a Aplicação
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Acessando a Aplicação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#6-expor-o-gateway-para-acesso-externo" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Expor o Gateway para Acesso Externo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#61-alternativa-port-forward" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1. Alternativa: Port Forward
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-alternativa-minikube-tunnel-loadbalancer" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2. Alternativa: Minikube Tunnel (LoadBalancer)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estrutura-do-diretorio-k8s" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estrutura do Diretório k8s/
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microservicos-deployados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microserviços Deployados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Microserviços Deployados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-gateway-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Gateway Service
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-product-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Product Service
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-order-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Order Service
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-account-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Account Service
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-auth-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Auth Service
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-exchange-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Exchange Service
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#infraestrutura" class="md-nav__link">
+    <span class="md-ellipsis">
+      Infraestrutura
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Infraestrutura">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      PostgreSQL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arquitetura-de-comunicacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arquitetura de Comunicação
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comandos-uteis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comandos Úteis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comandos Úteis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gerenciar-cluster-minikube" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gerenciar Cluster Minikube
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gerenciar-recursos-kubernetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gerenciar Recursos Kubernetes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gerenciar-imagens-no-minikube" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gerenciar Imagens no Minikube
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problema-pods-nao-iniciam-imagepullbackoff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: Pods não iniciam (ImagePullBackOff)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-pods-reiniciando-crashloopbackoff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: Pods reiniciando (CrashLoopBackOff)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-nao-consigo-acessar-o-servico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: Não consigo acessar o serviço
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-postgresql-nao-esta-acessivel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: PostgreSQL não está acessível
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-minikube-lento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: Minikube lento
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screenshots" class="md-nav__link">
+    <span class="md-ellipsis">
+      Screenshots
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Screenshots">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dashboard-do-kubernetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dashboard do Kubernetes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pods-em-execucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pods em Execução
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servicos-ativos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Serviços Ativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logs-de-um-pod" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logs de um Pod
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-dos-microsservicos-em-kubernetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploy dos Microsserviços em Kubernetes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deploy dos Microsserviços em Kubernetes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resumo-dos-manifests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resumo dos Manifests
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repositorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repositórios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnologias-utilizadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tecnologias Utilizadas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#melhorias-futuras" class="md-nav__link">
+    <span class="md-ellipsis">
+      Melhorias Futuras
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#licenca" class="md-nav__link">
+    <span class="md-ellipsis">
+      Licença
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contato" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contato
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="minikube-kubernetes-local">Minikube - Kubernetes Local</h1>
+<h2 id="objetivo">Objetivo</h2>
+<p>Este guia descreve como executar todos os microserviços em um cluster Kubernetes local usando o <strong>Minikube</strong>, simulando um ambiente de orquestração completo em sua máquina de desenvolvimento. O projeto é composto por 6 microserviços (Gateway, Product, Order, Account, Auth e Exchange), além de serviços de infraestrutura (PostgreSQL e Redis), todos containerizados e orquestrados via Kubernetes.</p>
+<hr>
+<h2 id="pre-requisitos">Pré-Requisitos</h2>
+<p>Antes de iniciar, certifique-se de ter as seguintes ferramentas instaladas:</p>
+<ul>
+<li>✅ <strong>Docker</strong> instalado e em execução (versão &gt;= 20.10)</li>
+<li>✅ <strong>Minikube</strong> instalado (versão &gt;= 1.0)</li>
+<li>✅ <strong>kubectl</strong> instalado e configurado</li>
+<li>✅ <strong>Privilégios de sudo</strong> (caso necessário para funcionalidades específicas)</li>
+<li>✅ Pelo menos <strong>4GB de RAM</strong> disponível para o Minikube</li>
+<li>✅ Pelo menos <strong>20GB de espaço em disco</strong></li>
+</ul>
+<h3 id="instalacao-das-ferramentas">Instalação das Ferramentas</h3>
+<h4 id="docker">Docker</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># macOS (Homebrew)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>docker
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># Linux</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://get.docker.com<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
+</code></pre></div>
+<h4 id="minikube">Minikube</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># macOS (Homebrew)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>brew<span class="w"> </span>install<span class="w"> </span>minikube
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Linux</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>curl<span class="w"> </span>-LO<span class="w"> </span>https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>sudo<span class="w"> </span>install<span class="w"> </span>minikube-linux-amd64<span class="w"> </span>/usr/local/bin/minikube
+</code></pre></div>
+<h4 id="kubectl">kubectl</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># macOS (Homebrew)</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>brew<span class="w"> </span>install<span class="w"> </span>kubectl
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># Linux</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>curl<span class="w"> </span>-LO<span class="w"> </span><span class="s2">"https://dl.k8s.io/release/</span><span class="k">$(</span>curl<span class="w"> </span>-L<span class="w"> </span>-s<span class="w"> </span>https://dl.k8s.io/release/stable.txt<span class="k">)</span><span class="s2">/bin/linux/amd64/kubectl"</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>sudo<span class="w"> </span>install<span class="w"> </span>-o<span class="w"> </span>root<span class="w"> </span>-g<span class="w"> </span>root<span class="w"> </span>-m<span class="w"> </span><span class="m">0755</span><span class="w"> </span>kubectl<span class="w"> </span>/usr/local/bin/kubectl
+</code></pre></div>
+<hr>
+<h2 id="passos-para-iniciar">Passos para Iniciar</h2>
+<h3 id="1-iniciar-o-minikube">1. Iniciar o Minikube</h3>
+<p>No terminal, execute:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>minikube<span class="w"> </span>start<span class="w"> </span>--driver<span class="o">=</span>docker<span class="w"> </span>--memory<span class="o">=</span><span class="m">4096</span><span class="w"> </span>--cpus<span class="o">=</span><span class="m">2</span>
+</code></pre></div>
+<p><strong>Parâmetros:</strong>
+- <code>--driver=docker</code>: Utiliza o Docker como driver (também pode usar <code>virtualbox</code>, <code>hyperkit</code>, etc.)
+- <code>--memory=4096</code>: Aloca 4GB de RAM para o cluster
+- <code>--cpus=2</code>: Aloca 2 CPUs para o cluster</p>
+<p>Aguarde até que o Minikube faça o download da imagem base, inicie o cluster e configure o ambiente.</p>
+<p><strong>Saída esperada:</strong>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>😄<span class="w">  </span>minikube<span class="w"> </span>v1.x.x<span class="w"> </span>on<span class="w"> </span>Darwin<span class="w"> </span><span class="m">13</span>.x
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>✨<span class="w">  </span>Using<span class="w"> </span>the<span class="w"> </span>docker<span class="w"> </span>driver<span class="w"> </span>based<span class="w"> </span>on<span class="w"> </span>user<span class="w"> </span>configuration
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>👍<span class="w">  </span>Starting<span class="w"> </span>control<span class="w"> </span>plane<span class="w"> </span>node<span class="w"> </span>minikube<span class="w"> </span><span class="k">in</span><span class="w"> </span>cluster<span class="w"> </span>minikube
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>🚜<span class="w">  </span>Pulling<span class="w"> </span>base<span class="w"> </span>image<span class="w"> </span>...
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>🔥<span class="w">  </span>Creating<span class="w"> </span>docker<span class="w"> </span>container<span class="w"> </span><span class="o">(</span><span class="nv">CPUs</span><span class="o">=</span><span class="m">2</span>,<span class="w"> </span><span class="nv">Memory</span><span class="o">=</span>4096MB<span class="o">)</span><span class="w"> </span>...
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>🐳<span class="w">  </span>Preparing<span class="w"> </span>Kubernetes<span class="w"> </span>v1.28.x<span class="w"> </span>on<span class="w"> </span>Docker<span class="w"> </span><span class="m">24</span>.0.x<span class="w"> </span>...
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>🔎<span class="w">  </span>Verifying<span class="w"> </span>Kubernetes<span class="w"> </span>components...
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>🌟<span class="w">  </span>Enabled<span class="w"> </span>addons:<span class="w"> </span>storage-provisioner,<span class="w"> </span>default-storageclass
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>🏄<span class="w">  </span>Done!<span class="w"> </span>kubectl<span class="w"> </span>is<span class="w"> </span>now<span class="w"> </span>configured<span class="w"> </span>to<span class="w"> </span>use<span class="w"> </span><span class="s2">"minikube"</span><span class="w"> </span>cluster
+</code></pre></div><p></p>
+<hr>
+<h3 id="2-clonar-e-navegar-ate-o-projeto">2. Clonar e Navegar até o Projeto</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Clonar o repositório (se ainda não tiver feito)</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/seu-usuario/pma.2025.2.git
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nb">cd</span><span class="w"> </span>pma.2025.2
+</code></pre></div>
+<hr>
+<h3 id="3-criar-recursos-de-infraestrutura">3. Criar Recursos de Infraestrutura</h3>
+<p>Antes de deployar os microserviços, precisamos criar os recursos compartilhados: <strong>ConfigMaps</strong>, <strong>Secrets</strong>, <strong>PostgreSQL</strong> e <strong>Redis</strong>.</p>
+<h4 id="31-criar-configmap-do-postgresql">3.1. Criar ConfigMap do PostgreSQL</h4>
+<p>Crie o arquivo <code>k8s/postgres-configmap.yaml</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ConfigMap</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nt">metadata</span><span class="p">:</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres-configmap</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="nt">data</span><span class="p">:</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">  </span><span class="nt">POSTGRES_DB</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">store</span>
+</code></pre></div>
+<p>Aplique:
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>k8s/postgres-configmap.yaml
+</code></pre></div><p></p>
+<h4 id="32-criar-secrets-do-postgresql">3.2. Criar Secrets do PostgreSQL</h4>
+<p>Crie o arquivo <code>k8s/postgres-secrets.yaml</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Secret</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="nt">metadata</span><span class="p">:</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres-secrets</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Opaque</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="nt">data</span><span class="p">:</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">  </span><span class="nt">POSTGRES_USER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c3RvcmU=</span><span class="w">        </span><span class="c1"># base64: store</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">  </span><span class="nt">POSTGRES_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c3RvcmU=</span><span class="w">    </span><span class="c1"># base64: store</span>
+</code></pre></div>
+<p><strong>Nota:</strong> Para gerar seu próprio base64:
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">"store"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64
+</code></pre></div><p></p>
+<p>Aplique:
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>k8s/postgres-secrets.yaml
+</code></pre></div><p></p>
+<h4 id="33-deployar-postgresql">3.3. Deployar PostgreSQL</h4>
+<p>Crie o arquivo <code>k8s/postgres-deployment.yaml</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apps/v1</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deployment</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="nt">metadata</span><span class="p">:</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="nt">spec</span><span class="p">:</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">  </span><span class="nt">replicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">  </span><span class="nt">selector</span><span class="p">:</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">    </span><span class="nt">matchLabels</span><span class="p">:</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">      </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">  </span><span class="nt">template</span><span class="p">:</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="w">    </span><span class="nt">metadata</span><span class="p">:</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="w">      </span><span class="nt">labels</span><span class="p">:</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="w">        </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="w">    </span><span class="nt">spec</span><span class="p">:</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="w">      </span><span class="nt">containers</span><span class="p">:</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="w">          </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres:17.6</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="w">          </span><span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">containerPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5432</span>
+<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a><span class="w">          </span><span class="nt">env</span><span class="p">:</span>
+<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">POSTGRES_DB</span>
+<a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a><span class="w">              </span><span class="nt">valueFrom</span><span class="p">:</span>
+<a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a><span class="w">                </span><span class="nt">configMapKeyRef</span><span class="p">:</span>
+<a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a><span class="w">                  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres-configmap</span>
+<a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a><span class="w">                  </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">POSTGRES_DB</span>
+<a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">POSTGRES_USER</span>
+<a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a><span class="w">              </span><span class="nt">valueFrom</span><span class="p">:</span>
+<a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a><span class="w">                </span><span class="nt">secretKeyRef</span><span class="p">:</span>
+<a id="__codelineno-11-29" name="__codelineno-11-29" href="#__codelineno-11-29"></a><span class="w">                  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres-secrets</span>
+<a id="__codelineno-11-30" name="__codelineno-11-30" href="#__codelineno-11-30"></a><span class="w">                  </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">POSTGRES_USER</span>
+<a id="__codelineno-11-31" name="__codelineno-11-31" href="#__codelineno-11-31"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">POSTGRES_PASSWORD</span>
+<a id="__codelineno-11-32" name="__codelineno-11-32" href="#__codelineno-11-32"></a><span class="w">              </span><span class="nt">valueFrom</span><span class="p">:</span>
+<a id="__codelineno-11-33" name="__codelineno-11-33" href="#__codelineno-11-33"></a><span class="w">                </span><span class="nt">secretKeyRef</span><span class="p">:</span>
+<a id="__codelineno-11-34" name="__codelineno-11-34" href="#__codelineno-11-34"></a><span class="w">                  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres-secrets</span>
+<a id="__codelineno-11-35" name="__codelineno-11-35" href="#__codelineno-11-35"></a><span class="w">                  </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">POSTGRES_PASSWORD</span>
+<a id="__codelineno-11-36" name="__codelineno-11-36" href="#__codelineno-11-36"></a><span class="w">          </span><span class="nt">volumeMounts</span><span class="p">:</span>
+<a id="__codelineno-11-37" name="__codelineno-11-37" href="#__codelineno-11-37"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres-storage</span>
+<a id="__codelineno-11-38" name="__codelineno-11-38" href="#__codelineno-11-38"></a><span class="w">              </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/lib/postgresql/data</span>
+<a id="__codelineno-11-39" name="__codelineno-11-39" href="#__codelineno-11-39"></a><span class="w">          </span><span class="nt">resources</span><span class="p">:</span>
+<a id="__codelineno-11-40" name="__codelineno-11-40" href="#__codelineno-11-40"></a><span class="w">            </span><span class="nt">requests</span><span class="p">:</span>
+<a id="__codelineno-11-41" name="__codelineno-11-41" href="#__codelineno-11-41"></a><span class="w">              </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="s">"256Mi"</span>
+<a id="__codelineno-11-42" name="__codelineno-11-42" href="#__codelineno-11-42"></a><span class="w">              </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="s">"100m"</span>
+<a id="__codelineno-11-43" name="__codelineno-11-43" href="#__codelineno-11-43"></a><span class="w">            </span><span class="nt">limits</span><span class="p">:</span>
+<a id="__codelineno-11-44" name="__codelineno-11-44" href="#__codelineno-11-44"></a><span class="w">              </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="s">"512Mi"</span>
+<a id="__codelineno-11-45" name="__codelineno-11-45" href="#__codelineno-11-45"></a><span class="w">              </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="s">"500m"</span>
+<a id="__codelineno-11-46" name="__codelineno-11-46" href="#__codelineno-11-46"></a><span class="w">      </span><span class="nt">volumes</span><span class="p">:</span>
+<a id="__codelineno-11-47" name="__codelineno-11-47" href="#__codelineno-11-47"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres-storage</span>
+<a id="__codelineno-11-48" name="__codelineno-11-48" href="#__codelineno-11-48"></a><span class="w">          </span><span class="nt">emptyDir</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
+<a id="__codelineno-11-49" name="__codelineno-11-49" href="#__codelineno-11-49"></a>
+<a id="__codelineno-11-50" name="__codelineno-11-50" href="#__codelineno-11-50"></a><span class="nn">---</span>
+<a id="__codelineno-11-51" name="__codelineno-11-51" href="#__codelineno-11-51"></a>
+<a id="__codelineno-11-52" name="__codelineno-11-52" href="#__codelineno-11-52"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<a id="__codelineno-11-53" name="__codelineno-11-53" href="#__codelineno-11-53"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Service</span>
+<a id="__codelineno-11-54" name="__codelineno-11-54" href="#__codelineno-11-54"></a><span class="nt">metadata</span><span class="p">:</span>
+<a id="__codelineno-11-55" name="__codelineno-11-55" href="#__codelineno-11-55"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres</span>
+<a id="__codelineno-11-56" name="__codelineno-11-56" href="#__codelineno-11-56"></a><span class="w">  </span><span class="nt">labels</span><span class="p">:</span>
+<a id="__codelineno-11-57" name="__codelineno-11-57" href="#__codelineno-11-57"></a><span class="w">    </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres</span>
+<a id="__codelineno-11-58" name="__codelineno-11-58" href="#__codelineno-11-58"></a><span class="nt">spec</span><span class="p">:</span>
+<a id="__codelineno-11-59" name="__codelineno-11-59" href="#__codelineno-11-59"></a><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ClusterIP</span>
+<a id="__codelineno-11-60" name="__codelineno-11-60" href="#__codelineno-11-60"></a><span class="w">  </span><span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-11-61" name="__codelineno-11-61" href="#__codelineno-11-61"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5432</span>
+<a id="__codelineno-11-62" name="__codelineno-11-62" href="#__codelineno-11-62"></a><span class="w">      </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TCP</span>
+<a id="__codelineno-11-63" name="__codelineno-11-63" href="#__codelineno-11-63"></a><span class="w">      </span><span class="nt">targetPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5432</span>
+<a id="__codelineno-11-64" name="__codelineno-11-64" href="#__codelineno-11-64"></a><span class="w">  </span><span class="nt">selector</span><span class="p">:</span>
+<a id="__codelineno-11-65" name="__codelineno-11-65" href="#__codelineno-11-65"></a><span class="w">    </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres</span>
+</code></pre></div>
+<p>Aplique:
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>k8s/postgres-deployment.yaml
+</code></pre></div><p></p>
+<h4 id="34-deployar-redis">3.4. Deployar Redis</h4>
+<p>Crie o arquivo <code>k8s/redis-deployment.yaml</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apps/v1</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deployment</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="nt">metadata</span><span class="p">:</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redis</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="nt">spec</span><span class="p">:</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">  </span><span class="nt">replicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">  </span><span class="nt">selector</span><span class="p">:</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">    </span><span class="nt">matchLabels</span><span class="p">:</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">      </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redis</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="w">  </span><span class="nt">template</span><span class="p">:</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="w">    </span><span class="nt">metadata</span><span class="p">:</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="w">      </span><span class="nt">labels</span><span class="p">:</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="w">        </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redis</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="w">    </span><span class="nt">spec</span><span class="p">:</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="w">      </span><span class="nt">containers</span><span class="p">:</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redis</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a><span class="w">          </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redis:7-alpine</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a><span class="w">          </span><span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">containerPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">6379</span>
+<a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a><span class="w">          </span><span class="nt">resources</span><span class="p">:</span>
+<a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a><span class="w">            </span><span class="nt">requests</span><span class="p">:</span>
+<a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a><span class="w">              </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="s">"128Mi"</span>
+<a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a><span class="w">              </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="s">"50m"</span>
+<a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a><span class="w">            </span><span class="nt">limits</span><span class="p">:</span>
+<a id="__codelineno-13-25" name="__codelineno-13-25" href="#__codelineno-13-25"></a><span class="w">              </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="s">"256Mi"</span>
+<a id="__codelineno-13-26" name="__codelineno-13-26" href="#__codelineno-13-26"></a><span class="w">              </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="s">"200m"</span>
+<a id="__codelineno-13-27" name="__codelineno-13-27" href="#__codelineno-13-27"></a>
+<a id="__codelineno-13-28" name="__codelineno-13-28" href="#__codelineno-13-28"></a><span class="nn">---</span>
+<a id="__codelineno-13-29" name="__codelineno-13-29" href="#__codelineno-13-29"></a>
+<a id="__codelineno-13-30" name="__codelineno-13-30" href="#__codelineno-13-30"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<a id="__codelineno-13-31" name="__codelineno-13-31" href="#__codelineno-13-31"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Service</span>
+<a id="__codelineno-13-32" name="__codelineno-13-32" href="#__codelineno-13-32"></a><span class="nt">metadata</span><span class="p">:</span>
+<a id="__codelineno-13-33" name="__codelineno-13-33" href="#__codelineno-13-33"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redis</span>
+<a id="__codelineno-13-34" name="__codelineno-13-34" href="#__codelineno-13-34"></a><span class="w">  </span><span class="nt">labels</span><span class="p">:</span>
+<a id="__codelineno-13-35" name="__codelineno-13-35" href="#__codelineno-13-35"></a><span class="w">    </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redis</span>
+<a id="__codelineno-13-36" name="__codelineno-13-36" href="#__codelineno-13-36"></a><span class="nt">spec</span><span class="p">:</span>
+<a id="__codelineno-13-37" name="__codelineno-13-37" href="#__codelineno-13-37"></a><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ClusterIP</span>
+<a id="__codelineno-13-38" name="__codelineno-13-38" href="#__codelineno-13-38"></a><span class="w">  </span><span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-13-39" name="__codelineno-13-39" href="#__codelineno-13-39"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">6379</span>
+<a id="__codelineno-13-40" name="__codelineno-13-40" href="#__codelineno-13-40"></a><span class="w">      </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TCP</span>
+<a id="__codelineno-13-41" name="__codelineno-13-41" href="#__codelineno-13-41"></a><span class="w">      </span><span class="nt">targetPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">6379</span>
+<a id="__codelineno-13-42" name="__codelineno-13-42" href="#__codelineno-13-42"></a><span class="w">  </span><span class="nt">selector</span><span class="p">:</span>
+<a id="__codelineno-13-43" name="__codelineno-13-43" href="#__codelineno-13-43"></a><span class="w">    </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redis</span>
+</code></pre></div>
+<p>Aplique:
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>k8s/redis-deployment.yaml
+</code></pre></div><p></p>
+<hr>
+<h3 id="4-deployar-os-microservicos">4. Deployar os Microserviços</h3>
+<p>Agora vamos deployar todos os microserviços. Você pode fazer isso individualmente ou de uma vez.</p>
+<h4 id="opcao-1-deploy-individual">Opção 1: Deploy Individual</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1"># Gateway Service</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>api/gateway-service/k8s/k8s.yaml
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="c1"># Product Service</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>api/product_service/k8s/k8s.yaml
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="c1"># Order Service</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>api/order_service/k8s/k8s.yaml
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="c1"># Account Service</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>api/accountservice/k8s/k8s.yaml
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a><span class="c1"># Auth Service</span>
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>api/auth_service/k8s/k8s.yaml
+<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a>
+<a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a><span class="c1"># Exchange Service</span>
+<a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>api/exchange/k8s/k8s.yaml
+</code></pre></div>
+<h4 id="opcao-2-deploy-em-lote-recomendado">Opção 2: Deploy em Lote (Recomendado)</h4>
+<p>Crie um diretório <code>k8s/services/</code> e copie todos os manifests:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>k8s/services
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>cp<span class="w"> </span>api/gateway-service/k8s/k8s.yaml<span class="w"> </span>k8s/services/gateway.yaml
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>cp<span class="w"> </span>api/product_service/k8s/k8s.yaml<span class="w"> </span>k8s/services/product.yaml
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>cp<span class="w"> </span>api/order_service/k8s/k8s.yaml<span class="w"> </span>k8s/services/order.yaml
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>cp<span class="w"> </span>api/accountservice/k8s/k8s.yaml<span class="w"> </span>k8s/services/account.yaml
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>cp<span class="w"> </span>api/auth_service/k8s/k8s.yaml<span class="w"> </span>k8s/services/auth.yaml
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>cp<span class="w"> </span>api/exchange/k8s/k8s.yaml<span class="w"> </span>k8s/services/exchange.yaml
+</code></pre></div>
+<p>Aplique todos de uma vez:
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>k8s/services/
+</code></pre></div><p></p>
+<hr>
+<h3 id="5-verificar-status">5. Verificar Status</h3>
+<h4 id="51-verificar-pods">5.1. Verificar Pods</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>kubectl<span class="w"> </span>get<span class="w"> </span>pods
+</code></pre></div>
+<p><strong>Saída esperada:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>NAME                                READY   STATUS    RESTARTS   AGE
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>postgres-XXXXXXXXXX-XXXXX           1/1     Running   0          5m
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>redis-XXXXXXXXXX-XXXXX              1/1     Running   0          5m
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>gateway-XXXXXXXXXX-XXXXX            1/1     Running   0          2m
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>product-service-XXXXXXXXXX-XXXXX    1/1     Running   0          2m
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>order-service-XXXXXXXXXX-XXXXX      1/1     Running   0          2m
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>account-service-XXXXXXXXXX-XXXXX    1/1     Running   0          2m
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>auth-service-XXXXXXXXXX-XXXXX       1/1     Running   0          2m
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>exchange-service-XXXXXXXXXX-XXXXX   1/1     Running   0          2m
+</code></pre></div>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="./docs/minikube-pods-running.png" data-desc-position="bottom"><img alt="Minikube Pods Running" src="./docs/minikube-pods-running.png"></a></p>
+<p><strong>Verificar se todos os pods estão com o STATUS <code>Running</code> e <code>READY 1/1</code>.</strong></p>
+<p><strong>Caso algum pod esteja com status <code>CrashLoopBackOff</code> ou <code>Error</code>, inspecione os logs:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>kubectl<span class="w"> </span>logs<span class="w"> </span>&lt;nome-do-pod&gt;
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="c1"># Exemplo:</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>kubectl<span class="w"> </span>logs<span class="w"> </span>product-service-XXXXXXXXXX-XXXXX
+</code></pre></div>
+<h4 id="52-verificar-servicos">5.2. Verificar Serviços</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>kubectl<span class="w"> </span>get<span class="w"> </span>svc
+</code></pre></div>
+<p><strong>Saída esperada:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>NAME               TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>kubernetes         ClusterIP   10.96.0.1       &lt;none&gt;        443/TCP    10m
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>postgres           ClusterIP   10.96.0.10      &lt;none&gt;        5432/TCP   5m
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>redis              ClusterIP   10.96.0.11      &lt;none&gt;        6379/TCP   5m
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>gateway            ClusterIP   10.96.0.12      &lt;none&gt;        80/TCP     2m
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>product-service    ClusterIP   10.96.0.13      &lt;none&gt;        80/TCP     2m
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>order-service      ClusterIP   10.96.0.14      &lt;none&gt;        80/TCP     2m
+<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>account-service    ClusterIP   10.96.0.15      &lt;none&gt;        80/TCP     2m
+<a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>auth-service       ClusterIP   10.96.0.16      &lt;none&gt;        80/TCP     2m
+<a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a>exchange-service   ClusterIP   10.96.0.17      &lt;none&gt;        80/TCP     2m
+</code></pre></div>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="./docs/minikube-services-running.png" data-desc-position="bottom"><img alt="Minikube Services Running" src="./docs/minikube-services-running.png"></a></p>
+<hr>
+<h2 id="acessando-a-aplicacao">Acessando a Aplicação</h2>
+<h3 id="6-expor-o-gateway-para-acesso-externo">6. Expor o Gateway para Acesso Externo</h3>
+<p>O Gateway é o ponto de entrada da aplicação. Para acessá-lo externamente, use o comando <code>minikube service</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>minikube<span class="w"> </span>service<span class="w"> </span>gateway
+</code></pre></div>
+<p>O Minikube criará automaticamente um túnel temporário e abrirá o serviço no navegador. Caso não abra automaticamente, será exibido o URL:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>|-----------|---------|-------------|---------------------------|
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>| NAMESPACE |  NAME   | TARGET PORT |            URL            |
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>|-----------|---------|-------------|---------------------------|
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>| default   | gateway |          80 | http://192.168.49.2:30080 |
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>|-----------|---------|-------------|---------------------------|
+<a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>🎉  Opening service default/gateway in default browser...
+</code></pre></div>
+<h3 id="61-alternativa-port-forward">6.1. Alternativa: Port Forward</h3>
+<p>Se preferir usar port forwarding:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>kubectl<span class="w"> </span>port-forward<span class="w"> </span>svc/gateway<span class="w"> </span><span class="m">8080</span>:80
+</code></pre></div>
+<p>Acesse: <code>http://localhost:8080</code></p>
+<h3 id="62-alternativa-minikube-tunnel-loadbalancer">6.2. Alternativa: Minikube Tunnel (LoadBalancer)</h3>
+<p>Para usar serviços do tipo <code>LoadBalancer</code>, abra um novo terminal e execute:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>minikube<span class="w"> </span>tunnel
+</code></pre></div>
+<p>Isso criará um túnel que expõe serviços LoadBalancer no <code>localhost</code>.</p>
+<hr>
+<h2 id="estrutura-do-diretorio-k8s">Estrutura do Diretório k8s/</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>📁 k8s/
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>├── 📄 postgres-configmap.yaml       # ConfigMap do PostgreSQL
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>├── 📄 postgres-secrets.yaml         # Secrets do PostgreSQL
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>├── 📄 postgres-deployment.yaml      # Deployment e Service do PostgreSQL
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>├── 📄 redis-deployment.yaml         # Deployment e Service do Redis
+<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>├── 📁 services/
+<a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a>│   ├── 📄 gateway.yaml              # Gateway Service (porta 80)
+<a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a>│   ├── 📄 product.yaml              # Product Service (porta 80)
+<a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a>│   ├── 📄 order.yaml                # Order Service (porta 80)
+<a id="__codelineno-27-10" name="__codelineno-27-10" href="#__codelineno-27-10"></a>│   ├── 📄 account.yaml              # Account Service (porta 80)
+<a id="__codelineno-27-11" name="__codelineno-27-11" href="#__codelineno-27-11"></a>│   ├── 📄 auth.yaml                 # Auth Service (porta 80)
+<a id="__codelineno-27-12" name="__codelineno-27-12" href="#__codelineno-27-12"></a>│   └── 📄 exchange.yaml             # Exchange Service (porta 80)
+<a id="__codelineno-27-13" name="__codelineno-27-13" href="#__codelineno-27-13"></a>└── 📄 README.md                     # Este arquivo
+</code></pre></div>
+<hr>
+<h2 id="microservicos-deployados">Microserviços Deployados</h2>
+<h3 id="1-gateway-service">1. Gateway Service</h3>
+<ul>
+<li><strong>Imagem:</strong> <code>deenaelorra/gateway:latest</code></li>
+<li><strong>Porta:</strong> 8080 (container) → 80 (service)</li>
+<li><strong>Tipo:</strong> ClusterIP</li>
+<li><strong>Dependências:</strong> PostgreSQL, Redis</li>
+<li><strong>Recursos:</strong> 200Mi-300Mi RAM, 50m-200m CPU</li>
+</ul>
+<h3 id="2-product-service">2. Product Service</h3>
+<ul>
+<li><strong>Imagem:</strong> <code>deenaelorra/product:latest</code></li>
+<li><strong>Porta:</strong> 8080 (container) → 80 (service)</li>
+<li><strong>Tipo:</strong> ClusterIP</li>
+<li><strong>Dependências:</strong> PostgreSQL, Redis</li>
+<li><strong>Recursos:</strong> 200Mi-300Mi RAM, 50m-200m CPU</li>
+<li><strong>Schema:</strong> <code>product</code> (Flyway auto-migration)</li>
+</ul>
+<h3 id="3-order-service">3. Order Service</h3>
+<ul>
+<li><strong>Imagem:</strong> <code>deenaelorra/order:latest</code></li>
+<li><strong>Porta:</strong> 8080 (container) → 80 (service)</li>
+<li><strong>Tipo:</strong> ClusterIP</li>
+<li><strong>Dependências:</strong> PostgreSQL, Redis</li>
+<li><strong>Recursos:</strong> 200Mi-300Mi RAM, 50m-200m CPU</li>
+</ul>
+<h3 id="4-account-service">4. Account Service</h3>
+<ul>
+<li><strong>Imagem:</strong> <code>deenaelorra/account:latest</code></li>
+<li><strong>Porta:</strong> 8080 (container) → 80 (service)</li>
+<li><strong>Tipo:</strong> ClusterIP</li>
+<li><strong>Dependências:</strong> PostgreSQL, Redis</li>
+<li><strong>Recursos:</strong> 200Mi-300Mi RAM, 50m-200m CPU</li>
+</ul>
+<h3 id="5-auth-service">5. Auth Service</h3>
+<ul>
+<li><strong>Imagem:</strong> <code>deenaelorra/auth:latest</code></li>
+<li><strong>Porta:</strong> 8080 (container) → 80 (service)</li>
+<li><strong>Tipo:</strong> ClusterIP</li>
+<li><strong>Dependências:</strong> PostgreSQL, Redis</li>
+<li><strong>Recursos:</strong> 200Mi-300Mi RAM, 50m-200m CPU</li>
+<li><strong>JWT:</strong> Issuer: <code>store-auth</code>, Expiration: 1 hora</li>
+</ul>
+<h3 id="6-exchange-service">6. Exchange Service</h3>
+<ul>
+<li><strong>Imagem:</strong> <code>deenaelorra/exchange:latest</code></li>
+<li><strong>Porta:</strong> 8000 (container) → 80 (service)</li>
+<li><strong>Tipo:</strong> ClusterIP</li>
+<li><strong>Dependências:</strong> Nenhuma (Python/FastAPI)</li>
+<li><strong>Recursos:</strong> 100Mi-200Mi RAM, 50m-200m CPU</li>
+</ul>
+<hr>
+<h2 id="infraestrutura">Infraestrutura</h2>
+<h3 id="postgresql">PostgreSQL</h3>
+<ul>
+<li><strong>Imagem:</strong> <code>postgres:17.6</code></li>
+<li><strong>Porta:</strong> 5432</li>
+<li><strong>Database:</strong> <code>store</code></li>
+<li><strong>User:</strong> <code>store</code> (configurado via Secret)</li>
+<li><strong>Password:</strong> <code>store</code> (configurado via Secret)</li>
+<li><strong>Recursos:</strong> 256Mi-512Mi RAM, 100m-500m CPU</li>
+</ul>
+<h3 id="redis">Redis</h3>
+<ul>
+<li><strong>Imagem:</strong> <code>redis:7-alpine</code></li>
+<li><strong>Porta:</strong> 6379</li>
+<li><strong>Recursos:</strong> 128Mi-256Mi RAM, 50m-200m CPU</li>
+</ul>
+<hr>
+<h2 id="arquitetura-de-comunicacao">Arquitetura de Comunicação</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>                          ┌──────────────────┐
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>                          │   Cliente/User   │
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>                          └────────┬─────────┘
+<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>                                   │
+<a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>                                   v
+<a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a>                          ┌──────────────────┐
+<a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a>                          │     Gateway      │ :80
+<a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a>                          │   (API Gateway)  │
+<a id="__codelineno-28-9" name="__codelineno-28-9" href="#__codelineno-28-9"></a>                          └────────┬─────────┘
+<a id="__codelineno-28-10" name="__codelineno-28-10" href="#__codelineno-28-10"></a>                                   │
+<a id="__codelineno-28-11" name="__codelineno-28-11" href="#__codelineno-28-11"></a>          ┌────────────┬───────────┼───────────┬────────────┐
+<a id="__codelineno-28-12" name="__codelineno-28-12" href="#__codelineno-28-12"></a>          │            │           │           │            │
+<a id="__codelineno-28-13" name="__codelineno-28-13" href="#__codelineno-28-13"></a>          v            v           v           v            v
+<a id="__codelineno-28-14" name="__codelineno-28-14" href="#__codelineno-28-14"></a>    ┌─────────┐  ┌─────────┐  ┌─────────┐  ┌─────────┐  ┌─────────┐
+<a id="__codelineno-28-15" name="__codelineno-28-15" href="#__codelineno-28-15"></a>    │ Product │  │  Order  │  │ Account │  │  Auth   │  │Exchange │
+<a id="__codelineno-28-16" name="__codelineno-28-16" href="#__codelineno-28-16"></a>    │ Service │  │ Service │  │ Service │  │ Service │  │ Service │
+<a id="__codelineno-28-17" name="__codelineno-28-17" href="#__codelineno-28-17"></a>    └────┬────┘  └────┬────┘  └────┬────┘  └────┬────┘  └─────────┘
+<a id="__codelineno-28-18" name="__codelineno-28-18" href="#__codelineno-28-18"></a>         │            │            │            │
+<a id="__codelineno-28-19" name="__codelineno-28-19" href="#__codelineno-28-19"></a>         └────────────┴────────────┴────────────┘
+<a id="__codelineno-28-20" name="__codelineno-28-20" href="#__codelineno-28-20"></a>                      │            │
+<a id="__codelineno-28-21" name="__codelineno-28-21" href="#__codelineno-28-21"></a>                      v            v
+<a id="__codelineno-28-22" name="__codelineno-28-22" href="#__codelineno-28-22"></a>              ┌──────────────┐  ┌──────────┐
+<a id="__codelineno-28-23" name="__codelineno-28-23" href="#__codelineno-28-23"></a>              │  PostgreSQL  │  │  Redis   │
+<a id="__codelineno-28-24" name="__codelineno-28-24" href="#__codelineno-28-24"></a>              │   Database   │  │  Cache   │
+<a id="__codelineno-28-25" name="__codelineno-28-25" href="#__codelineno-28-25"></a>              └──────────────┘  └──────────┘
+</code></pre></div>
+<hr>
+<h2 id="comandos-uteis">Comandos Úteis</h2>
+<h3 id="gerenciar-cluster-minikube">Gerenciar Cluster Minikube</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="c1"># Ver status do Minikube</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>minikube<span class="w"> </span>status
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a><span class="c1"># Parar o Minikube</span>
+<a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>minikube<span class="w"> </span>stop
+<a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a>
+<a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a><span class="c1"># Deletar o cluster</span>
+<a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a>minikube<span class="w"> </span>delete
+<a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a>
+<a id="__codelineno-29-10" name="__codelineno-29-10" href="#__codelineno-29-10"></a><span class="c1"># Acessar dashboard do Kubernetes</span>
+<a id="__codelineno-29-11" name="__codelineno-29-11" href="#__codelineno-29-11"></a>minikube<span class="w"> </span>dashboard
+<a id="__codelineno-29-12" name="__codelineno-29-12" href="#__codelineno-29-12"></a>
+<a id="__codelineno-29-13" name="__codelineno-29-13" href="#__codelineno-29-13"></a><span class="c1"># Ver IP do Minikube</span>
+<a id="__codelineno-29-14" name="__codelineno-29-14" href="#__codelineno-29-14"></a>minikube<span class="w"> </span>ip
+<a id="__codelineno-29-15" name="__codelineno-29-15" href="#__codelineno-29-15"></a>
+<a id="__codelineno-29-16" name="__codelineno-29-16" href="#__codelineno-29-16"></a><span class="c1"># SSH no node do Minikube</span>
+<a id="__codelineno-29-17" name="__codelineno-29-17" href="#__codelineno-29-17"></a>minikube<span class="w"> </span>ssh
+</code></pre></div>
+<h3 id="gerenciar-recursos-kubernetes">Gerenciar Recursos Kubernetes</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="c1"># Listar todos os recursos</span>
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>kubectl<span class="w"> </span>get<span class="w"> </span>all
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>
+<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a><span class="c1"># Descrever um pod</span>
+<a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>kubectl<span class="w"> </span>describe<span class="w"> </span>pod<span class="w"> </span>&lt;nome-do-pod&gt;
+<a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a>
+<a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a><span class="c1"># Ver logs de um pod</span>
+<a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a>kubectl<span class="w"> </span>logs<span class="w"> </span>&lt;nome-do-pod&gt;
+<a id="__codelineno-30-9" name="__codelineno-30-9" href="#__codelineno-30-9"></a>
+<a id="__codelineno-30-10" name="__codelineno-30-10" href="#__codelineno-30-10"></a><span class="c1"># Ver logs em tempo real</span>
+<a id="__codelineno-30-11" name="__codelineno-30-11" href="#__codelineno-30-11"></a>kubectl<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>&lt;nome-do-pod&gt;
+<a id="__codelineno-30-12" name="__codelineno-30-12" href="#__codelineno-30-12"></a>
+<a id="__codelineno-30-13" name="__codelineno-30-13" href="#__codelineno-30-13"></a><span class="c1"># Executar comando em um pod</span>
+<a id="__codelineno-30-14" name="__codelineno-30-14" href="#__codelineno-30-14"></a>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>&lt;nome-do-pod&gt;<span class="w"> </span>--<span class="w"> </span>/bin/bash
+<a id="__codelineno-30-15" name="__codelineno-30-15" href="#__codelineno-30-15"></a>
+<a id="__codelineno-30-16" name="__codelineno-30-16" href="#__codelineno-30-16"></a><span class="c1"># Deletar um pod</span>
+<a id="__codelineno-30-17" name="__codelineno-30-17" href="#__codelineno-30-17"></a>kubectl<span class="w"> </span>delete<span class="w"> </span>pod<span class="w"> </span>&lt;nome-do-pod&gt;
+<a id="__codelineno-30-18" name="__codelineno-30-18" href="#__codelineno-30-18"></a>
+<a id="__codelineno-30-19" name="__codelineno-30-19" href="#__codelineno-30-19"></a><span class="c1"># Deletar todos os recursos</span>
+<a id="__codelineno-30-20" name="__codelineno-30-20" href="#__codelineno-30-20"></a>kubectl<span class="w"> </span>delete<span class="w"> </span>-f<span class="w"> </span>k8s/services/
+<a id="__codelineno-30-21" name="__codelineno-30-21" href="#__codelineno-30-21"></a>
+<a id="__codelineno-30-22" name="__codelineno-30-22" href="#__codelineno-30-22"></a><span class="c1"># Escalar um deployment</span>
+<a id="__codelineno-30-23" name="__codelineno-30-23" href="#__codelineno-30-23"></a>kubectl<span class="w"> </span>scale<span class="w"> </span>deployment<span class="w"> </span>gateway<span class="w"> </span>--replicas<span class="o">=</span><span class="m">3</span>
+<a id="__codelineno-30-24" name="__codelineno-30-24" href="#__codelineno-30-24"></a>
+<a id="__codelineno-30-25" name="__codelineno-30-25" href="#__codelineno-30-25"></a><span class="c1"># Ver eventos do cluster</span>
+<a id="__codelineno-30-26" name="__codelineno-30-26" href="#__codelineno-30-26"></a>kubectl<span class="w"> </span>get<span class="w"> </span>events<span class="w"> </span>--sort-by<span class="o">=</span>.metadata.creationTimestamp
+</code></pre></div>
+<h3 id="gerenciar-imagens-no-minikube">Gerenciar Imagens no Minikube</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="c1"># Usar Docker do Minikube (evita pull do Docker Hub)</span>
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="nb">eval</span><span class="w"> </span><span class="k">$(</span>minikube<span class="w"> </span>docker-env<span class="k">)</span>
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>
+<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a><span class="c1"># Voltar ao Docker local</span>
+<a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a><span class="nb">eval</span><span class="w"> </span><span class="k">$(</span>minikube<span class="w"> </span>docker-env<span class="w"> </span>-u<span class="k">)</span>
+<a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a>
+<a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a><span class="c1"># Listar imagens no Minikube</span>
+<a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a>minikube<span class="w"> </span>ssh<span class="w"> </span>docker<span class="w"> </span>images
+<a id="__codelineno-31-9" name="__codelineno-31-9" href="#__codelineno-31-9"></a>
+<a id="__codelineno-31-10" name="__codelineno-31-10" href="#__codelineno-31-10"></a><span class="c1"># Carregar imagem local no Minikube</span>
+<a id="__codelineno-31-11" name="__codelineno-31-11" href="#__codelineno-31-11"></a>minikube<span class="w"> </span>image<span class="w"> </span>load<span class="w"> </span>deenaelorra/gateway:latest
+</code></pre></div>
+<hr>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="problema-pods-nao-iniciam-imagepullbackoff">Problema: Pods não iniciam (ImagePullBackOff)</h3>
+<p><strong>Causa:</strong> Minikube não consegue baixar a imagem do Docker Hub</p>
+<p><strong>Solução 1:</strong> Use o Docker do Minikube para buildar localmente
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="nb">eval</span><span class="w"> </span><span class="k">$(</span>minikube<span class="w"> </span>docker-env<span class="k">)</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>deenaelorra/gateway:latest<span class="w"> </span>api/gateway-service/
+</code></pre></div><p></p>
+<p><strong>Solução 2:</strong> Altere <code>imagePullPolicy</code> para <code>IfNotPresent</code> ou <code>Never</code>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="nt">imagePullPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IfNotPresent</span>
+</code></pre></div><p></p>
+<h3 id="problema-pods-reiniciando-crashloopbackoff">Problema: Pods reiniciando (CrashLoopBackOff)</h3>
+<p><strong>Causa:</strong> Aplicação falhando ao iniciar</p>
+<p><strong>Solução:</strong> Verifique os logs
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>kubectl<span class="w"> </span>logs<span class="w"> </span>&lt;nome-do-pod&gt;
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>kubectl<span class="w"> </span>describe<span class="w"> </span>pod<span class="w"> </span>&lt;nome-do-pod&gt;
+</code></pre></div><p></p>
+<p>Possíveis causas:
+- PostgreSQL não está pronto
+- Credenciais inválidas
+- Porta já em uso
+- Falta de memória</p>
+<h3 id="problema-nao-consigo-acessar-o-servico">Problema: Não consigo acessar o serviço</h3>
+<p><strong>Solução:</strong> Verifique se o serviço está rodando
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>kubectl<span class="w"> </span>get<span class="w"> </span>svc
+<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>minikube<span class="w"> </span>service<span class="w"> </span>gateway<span class="w"> </span>--url
+</code></pre></div><p></p>
+<p>Use port-forward como alternativa:
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>kubectl<span class="w"> </span>port-forward<span class="w"> </span>svc/gateway<span class="w"> </span><span class="m">8080</span>:80
+</code></pre></div><p></p>
+<h3 id="problema-postgresql-nao-esta-acessivel">Problema: PostgreSQL não está acessível</h3>
+<p><strong>Solução:</strong> Verifique se o pod está rodando
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>postgres
+<a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>kubectl<span class="w"> </span>logs<span class="w"> </span>&lt;postgres-pod&gt;
+</code></pre></div><p></p>
+<p>Teste a conexão:
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>&lt;postgres-pod&gt;<span class="w"> </span>--<span class="w"> </span>psql<span class="w"> </span>-U<span class="w"> </span>store<span class="w"> </span>-d<span class="w"> </span>store
+</code></pre></div><p></p>
+<h3 id="problema-minikube-lento">Problema: Minikube lento</h3>
+<p><strong>Solução:</strong> Aumente recursos
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>minikube<span class="w"> </span>stop
+<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>minikube<span class="w"> </span>delete
+<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a>minikube<span class="w"> </span>start<span class="w"> </span>--driver<span class="o">=</span>docker<span class="w"> </span>--memory<span class="o">=</span><span class="m">8192</span><span class="w"> </span>--cpus<span class="o">=</span><span class="m">4</span>
+</code></pre></div><p></p>
+<hr>
+<h2 id="screenshots">Screenshots</h2>
+<h3 id="dashboard-do-kubernetes">Dashboard do Kubernetes</h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="./docs/kubernetes-dashboard.png" data-desc-position="bottom"><img alt="Kubernetes Dashboard" src="./docs/kubernetes-dashboard.png"></a></p>
+<h3 id="pods-em-execucao">Pods em Execução</h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="./docs/minikube-pods-running.png" data-desc-position="bottom"><img alt="Pods Running" src="./docs/minikube-pods-running.png"></a></p>
+<h3 id="servicos-ativos">Serviços Ativos</h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="./docs/minikube-services-running.png" data-desc-position="bottom"><img alt="Services Running" src="./docs/minikube-services-running.png"></a></p>
+<h3 id="logs-de-um-pod">Logs de um Pod</h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="./docs/minikube-pod-logs.png" data-desc-position="bottom"><img alt="Pod Logs" src="./docs/minikube-pod-logs.png"></a></p>
+<hr>
+<h2 id="deploy-dos-microsservicos-em-kubernetes">Deploy dos Microsserviços em Kubernetes</h2>
+<h3 id="resumo-dos-manifests">Resumo dos Manifests</h3>
+<table>
+<thead>
+<tr>
+<th>Serviço</th>
+<th>Arquivo</th>
+<th>Replicas</th>
+<th>Imagem</th>
+<th>Porta</th>
+<th>Dependências</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gateway</td>
+<td>api/gateway-service/k8s/k8s.yaml</td>
+<td>1</td>
+<td>deenaelorra/gateway:latest</td>
+<td>8080→80</td>
+<td>PostgreSQL, Redis</td>
+</tr>
+<tr>
+<td>Product</td>
+<td>api/product_service/k8s/k8s.yaml</td>
+<td>1</td>
+<td>deenaelorra/product:latest</td>
+<td>8080→80</td>
+<td>PostgreSQL, Redis</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>api/order_service/k8s/k8s.yaml</td>
+<td>1</td>
+<td>deenaelorra/order:latest</td>
+<td>8080→80</td>
+<td>PostgreSQL, Redis</td>
+</tr>
+<tr>
+<td>Account</td>
+<td>api/accountservice/k8s/k8s.yaml</td>
+<td>1</td>
+<td>deenaelorra/account:latest</td>
+<td>8080→80</td>
+<td>PostgreSQL, Redis</td>
+</tr>
+<tr>
+<td>Auth</td>
+<td>api/auth_service/k8s/k8s.yaml</td>
+<td>1</td>
+<td>deenaelorra/auth:latest</td>
+<td>8080→80</td>
+<td>PostgreSQL, Redis</td>
+</tr>
+<tr>
+<td>Exchange</td>
+<td>api/exchange/k8s/k8s.yaml</td>
+<td>1</td>
+<td>deenaelorra/exchange:latest</td>
+<td>8000→80</td>
+<td>Nenhuma</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="repositorios">Repositórios</h2>
+<table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Descrição</th>
+<th>Link do Repositório</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Gateway Service</strong></td>
+<td>API Gateway para roteamento</td>
+<td>[Link do repositório]</td>
+</tr>
+<tr>
+<td><strong>Product Service</strong></td>
+<td>Gerenciamento de produtos</td>
+<td>[Link do repositório]</td>
+</tr>
+<tr>
+<td><strong>Order Service</strong></td>
+<td>Gerenciamento de pedidos</td>
+<td>[Link do repositório]</td>
+</tr>
+<tr>
+<td><strong>Account Service</strong></td>
+<td>Gerenciamento de contas</td>
+<td>[Link do repositório]</td>
+</tr>
+<tr>
+<td><strong>Auth Service</strong></td>
+<td>Autenticação e JWT</td>
+<td>[Link do repositório]</td>
+</tr>
+<tr>
+<td><strong>Exchange Service</strong></td>
+<td>Taxas de câmbio (Python)</td>
+<td>[Link do repositório]</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="tecnologias-utilizadas">Tecnologias Utilizadas</h2>
+<ul>
+<li><strong>Minikube</strong> - Kubernetes local</li>
+<li><strong>kubectl</strong> - CLI do Kubernetes</li>
+<li><strong>Docker</strong> - Containerização</li>
+<li><strong>PostgreSQL 17.6</strong> - Banco de dados relacional</li>
+<li><strong>Redis 7</strong> - Cache em memória</li>
+<li><strong>Spring Boot 3.5.5</strong> - Framework Java</li>
+<li><strong>FastAPI 0.104.1</strong> - Framework Python</li>
+</ul>
+<hr>
+<h2 id="melhorias-futuras">Melhorias Futuras</h2>
+<ol>
+<li><strong>Helm Charts</strong>: Simplificar deploy com Helm</li>
+<li><strong>Horizontal Pod Autoscaler</strong>: Escalonamento automático</li>
+<li><strong>Ingress Controller</strong>: Roteamento avançado</li>
+<li><strong>Persistent Volumes</strong>: Armazenamento persistente para PostgreSQL</li>
+<li><strong>Monitoring</strong>: Prometheus e Grafana</li>
+<li><strong>Logging</strong>: ELK Stack ou Loki</li>
+<li><strong>Service Mesh</strong>: Istio para observabilidade</li>
+</ol>
+<hr>
+<h2 id="licenca">Licença</h2>
+<p>[Adicione informações sobre a licença do projeto]</p>
+<hr>
+<h2 id="contato">Contato</h2>
+<p>[Adicione informações de contato ou contribuição]</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Última atualização">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2 de novembro de 2025 15:24:38 UTC">2 de novembro de 2025</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Criada">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2 de novembro de 2025 15:24:38 UTC">2 de novembro de 2025</span>
+  </span>
+
+    
+    
+      
+  
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Colaboradores">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"></path></svg>
+      
+    </span>
+    <nav>
+      
+        <a href="mailto:deenaeo@al.insper.edu.br">DeenaElOrra</a>
+    </nav>
+  </span>
+
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Voltar ao topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.select", "content.code.annotate", "content.tooltips", "navigation.instant", "navigation.instant.progress", "navigation.top", "navigation.path", "navigation.tracking", "navigation.expand"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../../assets/_markdown_exec_pyodide.js"></script>
+      
+        <script src="https://unpkg.com/mathjax/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://fastly.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+      
+        <script src="https://fastly.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="../../termynal.js"></script>
+      
+        <script src="../../assets/javascripts/badge.js" async></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
