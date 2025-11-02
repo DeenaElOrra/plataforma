@@ -107,5 +107,5 @@ nav:
     - Exchange API: Exchange API/main.md
     - Order API: Order API/main.md
     - Jenkins: Jenkins/main.md
-    - Notebook 1: notebook1/ex1_data.md
+    - Minikube: notebook1/ex1_data.md
   - Projeto: projeto/main.md
